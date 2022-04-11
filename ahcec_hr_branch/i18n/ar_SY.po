@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ahcec_hr_branch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-12 09:24+0000\n"
+"PO-Revision-Date: 2018-09-12 09:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Address"
+msgstr "العنوان"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Address Details"
+msgstr "تفاصيل العنوان"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_arabic_name
+msgid "Arabic Name"
+msgstr "اسم عربي"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Arabic Name(Office)"
+msgstr "(الاسم العربي (مكتب"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_arabic_city
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_city
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "City"
+msgstr "المدينة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_code
+msgid "Code"
+msgstr "الشفرة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_company_arabic_name
+msgid "Company Arabic Name"
+msgstr "اسم الشركة العربية"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_company_name
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Company name"
+msgstr "اسم الشركة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_arabic_country
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_country
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Country"
+msgstr "دولة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_res_config_settings_group_group_company_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.branch_res_config_settings_view_form
+#: model:res.groups,name:ahcec_hr_branch.group_company_branch
+msgid "Multi Branch"
+msgstr "أنواع التحذير"
+
+#. module: ahcec_hr_branch
+#: model:ir.actions.act_window,name:ahcec_hr_branch.action_hr_branch
+#: model:ir.ui.menu,name:ahcec_hr_branch.menu_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Office"
+msgstr "مكتب"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_name
+msgid "Office Name"
+msgstr "اسم المكتب"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_tree_view
+msgid "Office tree"
+msgstr "شجرة مكتب"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "P.O. Box"
+msgstr "ص ب: صندوق"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_po_box_no
+msgid "P.O.Box"
+msgstr "صندوق البريد"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.branch_res_config_settings_view_form
+msgid "Show Company Branch in employee form."
+msgstr "عرض فرع الشركة في شكل موظف."
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.branch_res_config_settings_view_form
+msgid "Show organizational chart on employee form"
+msgstr "عرض الهيكل التنظيمي على شكل الموظف"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_arabic_street
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "Street..."
+msgstr "الشارع..."
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_arabic_street2
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_phone
+msgid "Tel"
+msgstr "الهاتف"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: ahcec_hr_branch
+#: model:ir.model.fields,field_description:ahcec_hr_branch.field_hr_branch_zip
+msgid "Zip"
+msgstr "الرمز البريدي"
+
+#. module: ahcec_hr_branch
+#: model:ir.model,name:ahcec_hr_branch.model_hr_branch
+msgid "hr.branch"
+msgstr "hr.branch"
+
+#. module: ahcec_hr_branch
+#: model:ir.model,name:ahcec_hr_branch.model_res_config_settings
+msgid "res.config.settings"
+msgstr "الدقة.التكوين.إعدادات"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "اسم الشركة"
+msgstr "اسم الشركة"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "الشارع ..."
+msgstr "الشارع ..."
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "بلد"
+msgstr "بلد"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "تفاصيل عنوان"
+msgstr "تفاصيل عنوان"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "عنوان"
+msgstr "عنوان"
+
+#. module: ahcec_hr_branch
+#: model:ir.ui.view,arch_db:ahcec_hr_branch.hr_branch_form_view
+msgid "مدينة"
+msgstr "مدينة"
+

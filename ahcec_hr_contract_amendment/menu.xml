@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Contract Amendment -->
+    <menuitem id="menu_transfer_employee"
+              groups="hr.group_hr_user"
+              parent="hr.menu_hr_main"
+              sequence="5"
+              name="Contract Amendment"
+              action="action_contract_amendment_view"
+    />
+
+</odoo>

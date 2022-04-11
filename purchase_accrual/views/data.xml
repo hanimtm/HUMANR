@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="company_view_form_accrual" model="ir.ui.view">
+        <field name="name">res.company.accrual</field>
+        <field name="model">res.company</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Accrual Settings">
+                        <group>
+                            <field name="accrual_journal"/>
+                            <field name="accrual_account"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+    </record>
+
+
+
+
+<!--    <data noupdate="1">-->
+
+<!--        <record id="sequence_accrual" model="ir.sequence">-->
+<!--            <field name="name">Expense Accrual</field>-->
+<!--            <field name="code">expense.accrual.sequence</field>-->
+<!--            <field name="prefix">EXP.ARL/%(range_year)s/</field>-->
+<!--            <field eval="1" name="number_next"/>-->
+<!--            <field eval="1" name="number_increment"/>-->
+<!--            <field eval="True" name="use_date_range"/>-->
+<!--            <field eval="False" name="company_id"/>-->
+<!--            <field name="padding">4</field>-->
+<!--        </record>-->
+<!--    </data>-->
+</odoo>

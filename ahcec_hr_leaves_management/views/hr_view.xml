@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_leave_view" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+<!--            <xpath expr="//group[@name='active_group']" position="after">-->
+<!--                <group string="Current Leaves Remaining" groups="base.group_no_one">-->
+<!--                    <label for="current_remaining_lvs"/>-->
+<!--                    <div>-->
+<!--                        <field name="current_remaining_lvs" class="oe_inline"/> days-->
+<!--                    </div>-->
+<!--                </group>-->
+<!--            </xpath>-->
+             <xpath expr="//field[@name='birthday']" position="after">
+                 <field name="blood_group"/>
+             </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

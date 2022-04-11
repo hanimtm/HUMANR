@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr_contract_hr_employee,hr_contract_hr_employee,hr_contract.model_hr_contract,base.group_user,1,0,0,0
+hr_contract_type_gr_supervisor,hr.contract.type.gr_supervisor,hr_contract.model_hr_contract_type,ahcec_hr.group_gr_officer,1,0,0,0,0
+hr_contract_type_hr_officer,hr.contract.type.hr_officer,hr_contract.model_hr_contract_type,hr.group_hr_user,1,1,1,0
+hr_contract_hr_hof,hr_contract_hr_hof,hr_contract.model_hr_contract,ahcec_hr.group_hof,1,1,1,0
+employee_accrual_move,employee_accrual_move_acct,ahcec_hr_contract.model_employee_accrual_move,account.group_account_manager,1,1,1,1

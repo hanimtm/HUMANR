@@ -1,0 +1,499 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ahcec_hr_medical
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-04 10:34+0000\n"
+"PO-Revision-Date: 2018-08-04 10:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ahcec_hr_medical
+#: model:mail.template,body_html:ahcec_hr_medical.hr_medical_insurance_expiration_email
+msgid "\n"
+"                    <p>Hello ${object.responsible_id.partner_id.name},</p>\n"
+"                    <p>We are inform you ${object.employee_id.name} insurance ${object.name} is expired on ${object.end_date}.</p>\n"
+"                    <p>Thank you,</p>\n"
+"            "
+msgstr "\n"
+"                    <p>Hello ${object.responsible_id.partner_id.name},</p>\n"
+"                    <p>We are inform you ${object.employee_id.name} insurance ${object.name} is expired on ${object.end_date}.</p>\n"
+"                    <p>Thank you,</p>\n"
+"            "
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_claim_count
+msgid "# of claims"
+msgstr "عدد الادعاءات"
+
+#. module: ahcec_hr_medical
+#: model:mail.template,subject:ahcec_hr_medical.hr_medical_insurance_expiration_email
+msgid "${object.employee_id.name} Insurance Expiration Reminder"
+msgstr "${object.employee_id.name} Insurance Expiration Reminder"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: ahcec_hr_medical
+#: selection:claim.details,state:0
+msgid "Cancelled"
+msgstr "إلغاء"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_card_code
+msgid "Card Code"
+msgstr "كود البطاقة"
+
+#. module: ahcec_hr_medical
+#: model:ir.actions.server,name:ahcec_hr_medical.insurance_expiration_cron_ir_actions_server
+#: model:ir.cron,cron_name:ahcec_hr_medical.insurance_expiration_cron
+#: model:ir.cron,name:ahcec_hr_medical.insurance_expiration_cron
+msgid "Check Insurance"
+msgstr "تحقق التأمين"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,relation:0
+msgid "Child"
+msgstr "طفل"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_claim_amount
+msgid "Claim Amount"
+msgstr "مبلغ المطالبة"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claims_details_tree_view
+msgid "Claim Details"
+msgstr "تفاصيل المطالبة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_name
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+msgid "Claim Number"
+msgstr "رقم المطالبة"
+
+#. module: ahcec_hr_medical
+#: code:addons/ahcec_hr_medical/models/hr_employee_medical.py:218
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_claims_ids
+#: model:ir.ui.menu,name:ahcec_hr_medical.claims_details
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+#, python-format
+msgid "Claims"
+msgstr "مطالبات"
+
+#. module: ahcec_hr_medical
+#: model:ir.actions.act_window,name:ahcec_hr_medical.action_claims_details_view
+msgid "Claims Details"
+msgstr "تفاصيل المطالبات"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_class_id
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.employee_class_form_view
+msgid "Class"
+msgstr "فئة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_company_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: ahcec_hr_medical
+#: selection:claim.details,state:0
+msgid "Confirmed"
+msgstr "تم تأكيد"
+
+#. module: ahcec_hr_medical
+#: model:ir.actions.server,name:ahcec_hr_medical.ir_cron_insurance_premium_invoice_creation_ir_actions_server
+#: model:ir.cron,cron_name:ahcec_hr_medical.ir_cron_insurance_premium_invoice_creation
+#: model:ir.cron,name:ahcec_hr_medical.ir_cron_insurance_premium_invoice_creation
+msgid "Create Insurance Premium"
+msgstr "إنشاء قسط التأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Create Invoice"
+msgstr "إنشاء فاتورة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_create_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_create_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_create_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_create_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_create_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_create_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_currency_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_date_applied
+msgid "Date Applied"
+msgstr "تاريخ تطبيقها"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_dob
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_display_name
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_display_name
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_display_name
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ahcec_hr_medical
+#: selection:claim.details,state:0
+#: selection:insurance.details,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Done"
+msgstr "منتهي"
+
+#. module: ahcec_hr_medical
+#: selection:claim.details,state:0
+#: selection:insurance.details,state:0
+msgid "Draft"
+msgstr "مشروع"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,relation:0
+#: model:ir.model,name:ahcec_hr_medical.model_hr_employee
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_employee_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: ahcec_hr_medical
+#: model:ir.model,name:ahcec_hr_medical.model_employee_class
+msgid "Employee Class"
+msgstr "فئة الموظف"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Employee Details"
+msgstr "تفاصيل موظف"
+
+#. module: ahcec_hr_medical
+#: model:ir.model,name:ahcec_hr_medical.model_insurance_details
+msgid "Employee Medical Insurance"
+msgstr "التأمين الطبي للموظفين"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,gender:0
+msgid "Female"
+msgstr "إناثا"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,premium_type:0
+msgid "Half Yearly"
+msgstr "نصف سنوي"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: ahcec_hr_medical
+#: code:addons/ahcec_hr_medical/models/hr_employee_medical.py:196
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_insurance_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_insurance_id
+#: model:ir.ui.menu,name:ahcec_hr_medical.insurance_details
+#: model:ir.ui.menu,name:ahcec_hr_medical.insurance_main_menu
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.hr_employee_medical_form
+#, python-format
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_insurance_amount
+msgid "Insurance Amount"
+msgstr "مبلغ التأمين"
+
+#. module: ahcec_hr_medical
+#: model:product.product,name:ahcec_hr_medical.insurance_prodcuct
+#: model:product.template,name:ahcec_hr_medical.insurance_prodcuct_product_template
+msgid "Insurance Charge"
+msgstr "تكلفة التأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.actions.act_window,name:ahcec_hr_medical.action_insurance_details_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_tree_view
+msgid "Insurance Details"
+msgstr "تفاصيل التأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_name
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Insurance Number"
+msgstr "رقم التأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Insurance Premium"
+msgstr "قسط تأمين"
+
+#. module: ahcec_hr_medical
+#: code:addons/ahcec_hr_medical/models/hr_employee_medical.py:100
+#, python-format
+msgid "Insurance amount must be greater then premium amount!"
+msgstr "يجب أن يكون مبلغ التأمين أكبر من مبلغ القسط!"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_premium_ids
+msgid "Insurance premium"
+msgstr "قسط تأمين"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_invoice_id
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_is_invoice_created
+msgid "Invoice Created"
+msgstr "الفاتورة التي تم إنشاؤها"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details___last_update
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class___last_update
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details___last_update
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_write_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_write_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_write_uid
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_write_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_write_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_write_date
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,gender:0
+msgid "Male"
+msgstr "الذكر"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_hr_employee_insurance_ids
+msgid "Medical Insurance"
+msgstr "التأمين الصحى"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_member_name
+msgid "Member Name"
+msgstr "اسم العضو"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,premium_type:0
+msgid "Monthly"
+msgstr "شهريا"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_employee_class_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_note
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_passed_amount
+msgid "Passed Amount"
+msgstr "المبلغ الممنوح"
+
+#. module: ahcec_hr_medical
+#: code:addons/ahcec_hr_medical/models/hr_employee_medical.py:415
+#, python-format
+msgid "Passed Amount should be greater then 0"
+msgstr "يجب أن يكون المبلغ الممنوح أكبر من صفر"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_premium_type
+msgid "Payment Mode"
+msgstr "طريقة الدفع"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Policy Details"
+msgstr "تفاصيل السياسة"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Policy Holder Details"
+msgstr "تفاصيل حامل البوليصة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_premium_amount
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_amount
+msgid "Premium Amount"
+msgstr "مبلغ قسط"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_date
+msgid "Premium Date"
+msgstr "تاريخ قسط"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Print Invoice"
+msgstr "طباعة الفاتورة"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,premium_type:0
+msgid "Quarterly"
+msgstr "فصليا"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: ahcec_hr_medical
+#: selection:claim.details,state:0
+msgid "Refused"
+msgstr "رفض"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_relation
+msgid "Relation"
+msgstr "علاقة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_responsible_id
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_responsible_id
+msgid "Responsible"
+msgstr "مسئول"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_premium_sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.claim_details_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Set to draft"
+msgstr "تعيين على المسودة"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,relation:0
+msgid "Spouse"
+msgstr "الزوج"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_claim_details_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: ahcec_hr_medical
+#: model:ir.model.fields,field_description:ahcec_hr_medical.field_insurance_details_supplier_id
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "Supplier Details"
+msgstr "تفاصيل المورد"
+
+#. module: ahcec_hr_medical
+#: code:addons/ahcec_hr_medical/models/hr_employee_medical.py:262
+#, python-format
+msgid "There is no payable account defined for this supplier: \"%s\"."
+msgstr "لا يوجد حساب مدفوع محدد لهذا المورد: \ "٪ s \"."
+
+#. module: ahcec_hr_medical
+#: model:ir.ui.view,arch_db:ahcec_hr_medical.insurance_details_form_view
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: ahcec_hr_medical
+#: selection:insurance.details,premium_type:0
+msgid "Yearly"
+msgstr "سنوي"
+
+#. module: ahcec_hr_medical
+#: model:ir.model,name:ahcec_hr_medical.model_claim_details
+msgid "claim.details"
+msgstr "claim.details"
+
+#. module: ahcec_hr_medical
+#: model:ir.model,name:ahcec_hr_medical.model_insurance_premium
+msgid "insurance.premium"
+msgstr "قسط تأمين"
+

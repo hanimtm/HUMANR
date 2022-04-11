@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_exit_reject_reason_wizard_view_form" model="ir.ui.view">
+            <field name="name">hr.exit.reject.reason.wizard.form</field>
+            <field name="model">hr.exit.reject.reason.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Reject Reason">
+                    <group class="oe_title">
+                        <field name="reject_reason"/>
+                    </group>
+                    <footer>
+                        <button name="processed_and_send_email" string="Proceed" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

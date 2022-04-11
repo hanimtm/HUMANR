@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- QWeb Reports -->
+        <report
+                id="hr_exit_process_report"
+                model="hr.exit"
+                menu="True"
+                report_type="qweb-pdf"
+                string="Print Employee Exit Report"
+                name="ahcec_hr_exit_process.hr_exit_process_id"
+                file="ahcec_hr_exit_process.hr_exit_process_id"
+        />
+
+        <template id="hr_exit_process_id">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.html_container">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <div class="text-center">
+                                <!-- <h3>
+                                    <span t-field="doc.employee_id.name"/> - <span t-field="doc.state"/>
+                                </h3> -->
+                            </div>
+                            <!--                            <h3>General Information</h3>-->
+                            <table class="table table-bordered" style="table-layout: fixed">
+                                <tbody>
+                                    <tr style="border: 2px solid black;">
+                                        <td colspan="4" style="text-align:center;">
+                                            <img t-if="doc.company_id.logo"
+                                                 style="max-height:45pt;max-width:90%"
+                                                 t-att-src="image_data_uri(doc.company_id.logo)" alt="Company Logo"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td colspan="4" style="text-align:center;">
+                                            <h3>General Information</h3>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Request Date</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.request_date"/>
+                                        </td>
+                                        <td>
+                                            <strong>Employment Status</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.employment_status"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Strata ID</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.strata_id"/>
+                                        </td>
+                                        <td>
+                                            <strong>Job Position</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.job_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Contract</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.contract_id.name"/>
+                                        </td>
+                                        <td>
+                                            <strong>Last Day of Work</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.last_work_date"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Job Title</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.job_title.name"/>
+                                        </td>
+                                        <td>
+                                            <strong>Line Manager</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.line_manager_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+
+                                        <td>
+                                            <strong>OC</strong>
+                                        </td>
+                                        <td colspan="3">
+                                            <span t-field="doc.department_id.display_name"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Head of Department</strong>
+                                        </td>
+                                        <td colspan="3">
+                                            <span t-field="doc.manager_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Submission Date</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.confirm_date"/>
+                                        </td>
+                                        <td>
+                                            <strong>Submitted By</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.confirm_by_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: 2px solid black;">
+                                        <td>
+                                            <strong>Completion Date</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.dept_approved_date"/>
+                                        </td>
+                                        <td>
+                                            <strong>Completed By</strong>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.dept_manager_by_id.name"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3>Checklists</h3>
+                            <div class="oe_kanban_global_click">
+                                <t t-foreach="doc.checklist_ids" t-as="check">
+
+                                    <div class="o_row" style="border: 2px solid black;">
+                                        <div class="text-center">
+                                            <span class="text-center" t-field="check.checklist_id.name"/>
+                                        </div>
+                                        <div>
+                                            <p>
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <table style="margin-left:50px">
+                                                <t t-foreach="check.checklist_unique_ids"
+                                                   t-as="checklist_unique">
+                                                    <t t-if="checklist_unique.is_comments == False">
+                                                        <tr>
+                                                            <td>
+                                                                <span t-field="checklist_unique.name"/>
+                                                            </td>
+                                                            <td t-if="checklist_unique.completed == True"
+                                                                style="padding-left: 20px;">
+                                                                <input t-if="checklist_unique.completed == True"
+                                                                       type="checkbox"
+                                                                       id="exit_is_comment" name="Is Complete"
+                                                                       checked="True"/>
+                                                            </td>
+                                                            <td t-if="checklist_unique.completed != True"
+                                                                style="padding-left: 20px;">
+                                                                <input t-if="checklist_unique.completed != True"
+                                                                       type="checkbox"
+                                                                       id="exit_comment" name="complete"
+                                                                       value="complete"/>
+                                                            </td>
+                                                            <td style="padding-left: 20px;">
+                                                                <span t-field="checklist_unique.comments"/>
+                                                            </td>
+                                                        </tr>
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <span t-field="checklist_unique.name"/>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <input t-if="checklist_unique.completed == True" type="checkbox"-->
+                                                        <!--                                                           id="exit_is_comment" name="Is Complete"-->
+                                                        <!--                                                           checked="True"/>-->
+                                                        <!--                                                    <input t-if="checklist_unique.completed != True" type="checkbox"-->
+                                                        <!--                                                           id="exit_comment" name="complete"-->
+                                                        <!--                                                           value="complete"/>-->
+
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <span t-field="checklist_unique.comments"/>-->
+
+                                                    </t>
+                                                    <t t-if="checklist_unique.is_comments == True">
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <strong>
+                                                                    <span t-field="checklist_unique.name"/>
+                                                                </strong>
+                                                            </td>
+                                                            <td style="padding-left: 20px;">
+                                                                <span t-field="checklist_unique.comments"/>
+                                                            </td>
+                                                        </tr>
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <span t-field="checklist_unique.name"/>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <input t-if="checklist_unique.completed == True" type="checkbox"-->
+                                                        <!--                                                           id="exit_is_comment" name="Is Complete"-->
+                                                        <!--                                                           checked="True"/>-->
+                                                        <!--                                                    <input t-if="checklist_unique.completed != True" type="checkbox"-->
+                                                        <!--                                                           id="exit_comment" name="complete"-->
+                                                        <!--                                                           value="complete"/>-->
+
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>-->
+                                                        <!--                                                    <span t-field="checklist_unique.comments"/>-->
+
+                                                    </t>
+                                                </t>
+
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <p>
+                                            </p>
+                                        </div>
+                                        <div t-if="check.responsible_user_id">
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <strong>Responsible User</strong>
+                                            </span>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <span t-field="check.responsible_user_id.name"/>
+                                            </span>
+                                        </div>
+                                        <div t-if="check.notes">
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <strong>Remarks</strong>
+                                            </span>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <span t-field="check.notes"/>
+                                            </span>
+                                        </div>
+                                        <div t-if="check.state">
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <strong>State</strong>
+                                            </span>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <span t-field="check.state"/>
+                                            </span>
+                                        </div>
+                                        <div t-if="check.completion_date">
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <strong>Date</strong>
+                                            </span>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+                                            <span>
+                                                <span t-field="check.completion_date"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>Notes :</strong>
+                            <br/>
+                            <span t-field="doc.notes"/>
+                        </div>
+                        <div>
+                            <strong>Reason for Leaving :</strong>
+                            <span t-field="doc.reason_for_leaving_id.name"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

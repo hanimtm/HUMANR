@@ -1,0 +1,790 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ahcec_hr_visa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 13:15+0000\n"
+"PO-Revision-Date: 2018-09-11 13:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+msgid "\"\n"
+"\n"
+"                 in the"
+msgstr "\"\n"
+"\n"
+"                 في ال"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "(Saudi Riyals only)."
+msgstr "(بالريال السعودي فقط)."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid ",is employed with"
+msgstr "يعمل مع"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "<font face=\"Helvetica\">\n"
+"                    We would highly appreciate your assistance if you kindly issue\n"
+"                </font>"
+msgstr "<font face=\"Helvetica\">\n"
+"                    نحن نقدر عاليا مساعدتك إذا كنت تفضل إصدار\n"
+"                </font>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "<font face=\"Helvetica\">Sincerely yours,</font>"
+msgstr "<font face=\"Helvetica\">صديقك المخلص,</font>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "<span style=\"P1\">The Consular General – Visa Section </span><br/>\n"
+"            <span style=\"P1\">Embassy of </span><br/>"
+msgstr "<span style=\"P1\">القنصلية العامة - قسم التأشيرات</span><br/>\n"
+"            <span style=\"P1\">Embassy of </span><br/>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('days','=',0.0)]}\"> Days </span>"
+msgstr "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('days','=',0.0)]}\"> أيام </span>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('months','=',0.0)]}\"> Months </span>"
+msgstr "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('months','=',0.0)]}\"> الشهور </span>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('years','=',0.0)]}\"> Years </span>"
+msgstr "<span style=\"margin-right:5px;\" attrs=\"{'invisible':[('years','=',0.0)]}\"> Years </span>"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Adminstration Manager"
+msgstr "مدير الادارة"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Annual Vacation"
+msgstr "عطلة سنوية"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:154
+#, python-format
+msgid "Approve Date to must be greater then Approve Date from."
+msgstr "الموافقة على التاريخ يجب أن يكون أكبر ثم الموافقة على التاريخ من."
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Approved"
+msgstr "وافق"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_approved_date
+msgid "Approved Date"
+msgstr "التسجيل المعتمدة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_approved_date_from
+msgid "Approved Date From"
+msgstr "تاريخ الموافقة من"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_approved_date_to
+msgid "Approved Date To"
+msgstr "تاريخ الموافقة على"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_approved_by
+msgid "Approved by"
+msgstr "التي وافقت عليها"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Business Trip"
+msgstr "رحلة عمل"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+msgid "Business Visa"
+msgstr "تاشيرة رجال أعمال"
+
+#. module: ahcec_hr_visa
+#: selection:employee.family.visa,relation:0
+msgid "Child"
+msgstr "طفل"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_client_id
+msgid "Client Name"
+msgstr "اسم العميل"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_company_id
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_create_uid
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_create_date
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_tree
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_tree
+msgid "Date To"
+msgstr "التاريخ الى"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_birth_date
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_days
+msgid "Days"
+msgstr "أيام"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Dear Sir"
+msgstr "سيدى العزيز"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_department_id
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Department. His gross salary is SR"
+msgstr " قسم، أقسام. راتبه الإجمالي هو ريال"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_requested_date_from
+msgid "Departure Date"
+msgstr "تاريخ المغادرة"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:144
+#, python-format
+msgid "Departure Date must be greater then Return Date."
+msgstr "يجب أن يكون تاريخ المغادرة أكبر من تاريخ العودة."
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_description
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_display_name
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Email Id.."
+msgstr "عنوان الايميل.."
+
+#. module: ahcec_hr_visa
+#: model:ir.actions.report,name:ahcec_hr_visa.business_visa_new
+msgid "Embassy Business Visa Report"
+msgstr "تقرير السفارة الأمريكية للأعمال"
+
+#. module: ahcec_hr_visa
+#: model:ir.actions.report,name:ahcec_hr_visa.embassy_visitvisa_new
+msgid "Embassy Visit Visa Report"
+msgstr "تقرير السفارة زيارة التأشيرات"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Emergency"
+msgstr "حالة طوارئ"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_employee_id
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_employee_id
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: ahcec_hr_visa
+#: model:ir.model,name:ahcec_hr_visa.model_employee_family_visa
+msgid "Employee Family Visa"
+msgstr "تأشيرة العائلة للموظف"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:254
+#, python-format
+msgid "Error! Approved Date From must be less than Approved Date To."
+msgstr "خطأ! تاريخ الموافقة من يجب أن يكون أقل من تاريخ الموافقة إلى."
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:244
+#, python-format
+msgid "Error! Departure Date must be less than Return Date."
+msgstr "خطأ! يجب أن يكون تاريخ المغادرة أقل من تاريخ الإرجاع."
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,reason_of_visa:0
+msgid "Exit re-entry Visa"
+msgstr "الخروج من تأشيرة إعادة الدخول"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Expense"
+msgstr "المصروفات"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_expense_ids
+msgid "Expenses"
+msgstr "نفقات"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,reason_of_visa:0
+msgid "Extension of Exit re-entry Visa"
+msgstr "تمديد تأشيرة خروج العودة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Extra Information"
+msgstr "معلومات اضافية"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,visa_for:0
+msgid "Family"
+msgstr "أسرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_family_visa_ids
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Family Details"
+msgstr "تفاصيل عائلية"
+
+#. module: ahcec_hr_visa
+#: selection:employee.family.visa,gender:0
+msgid "Female"
+msgstr "إناثا"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Filter"
+msgstr "فلتر"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,reason_of_visa:0
+msgid "Final Exit"
+msgstr "خروج نهائي"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Generate Expense"
+msgstr "توليد المصروفات"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: ahcec_hr_visa
+#: model:ir.model,name:ahcec_hr_visa.model_hr_visa
+msgid "HR Visa"
+msgstr "تأشيرة الموارد البشرية"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_handled_by
+msgid "Handled by"
+msgstr "أنجز من قبل"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Holiday"
+msgstr "يوم الاجازة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_id
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_id_number
+msgid "ID Number"
+msgstr "رقم الهوية"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "In Progress"
+msgstr "في تَقَدم "
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,visa_for:0
+msgid "Individual"
+msgstr "فرد"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Issued"
+msgstr "نشر"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa___last_update
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_write_uid
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_write_date
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Level ”  in the"
+msgstr "المستوى "في"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_required_documents
+msgid "List of Documents Required"
+msgstr "قائمة الوثائق المطلوبة"
+
+#. module: ahcec_hr_visa
+#: selection:employee.family.visa,gender:0
+msgid "Male"
+msgstr "الذكر"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_member_name
+msgid "Member Name (As in Passport)"
+msgstr "اسم العضو (كما في جواز السفر)"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_months
+msgid "Months"
+msgstr "الشهور"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,ticket_type:0
+msgid "Multiple"
+msgstr "مضاعف"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_nationality
+msgid "Nationality"
+msgstr "جنسية"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_old_visa_ref
+msgid "Old Visa Number"
+msgstr "رقم التأشيرة القديمة"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Other"
+msgstr "آخر"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:329
+#, python-format
+msgid "Please Enter Values For Visa Number, Approved Date From and Approved Date To"
+msgstr "يرجى إدخال قيم للحصول على رقم تأشيرة ، تاريخ معتمد من وتاريخ موافقة إلى"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_purpose_of_visa
+msgid "Purpose of Visa"
+msgstr "الغرض من التأشيرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Put the description here"
+msgstr "وضع وصف هنا"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Reason of Visa"
+msgstr "سبب التأشيرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+msgid "Refused"
+msgstr "رفض"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_relation
+msgid "Relation"
+msgstr "علاقة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Required Documents"
+msgstr "المستندات المطلوبة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_requested_date_to
+msgid "Return Date"
+msgstr "تاريخ العودة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Saudi Arabia"
+msgstr "المملكة العربية السعودية"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Secondment"
+msgstr "إعارة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Select Department"
+msgstr "وزارة حدد"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Select Employee"
+msgstr "حدد الموظف"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Set as Draft"
+msgstr "تعيين كمسودة"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,ticket_type:0
+msgid "Single"
+msgstr "غير مرتبطة"
+
+#. module: ahcec_hr_visa
+#: selection:employee.family.visa,relation:0
+msgid "Spouse"
+msgstr "الزوج"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_state
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "State"
+msgstr "المحافظة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Submit"
+msgstr "عرض"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "This is to advise that"
+msgstr "هذا هو لتقديم المشورة ذلك"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+msgid "To Submit"
+msgstr "لتقديم"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_expense_total
+msgid "Total Expense"
+msgstr "المصاريف الكلية"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,purpose_of_visa:0
+msgid "Training"
+msgstr "تدريب"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_ticket_type
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Type"
+msgstr "النوع"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_reason_of_visa
+msgid "Type of Visa"
+msgstr "نوع التأشيرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Validate"
+msgstr "اعتماد "
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_employee_family_visa_visa_id
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+#: model:product.product,name:ahcec_hr_visa.hr_visa_request
+#: model:product.template,name:ahcec_hr_visa.hr_visa_request_product_template
+msgid "Visa"
+msgstr "تأشيرة"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:267
+#, python-format
+msgid "Visa Confirmed."
+msgstr "التأشيرة مؤكد."
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_years
+msgid "Visa Duration"
+msgstr "مدة التأشيرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_visa_for
+msgid "Visa For"
+msgstr "تأشيرة ل"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+msgid "Visa Information"
+msgstr "معلومات التأشيرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_visa_ref
+msgid "Visa Number"
+msgstr "رقم الفيزا"
+
+#. module: ahcec_hr_visa
+#: model:ir.actions.act_window,name:ahcec_hr_visa.action_hr_visa
+#: model:ir.ui.menu,name:ahcec_hr_visa.menu_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_form
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.hr_visa_tree
+msgid "Visa Request"
+msgstr "طلب تأشيرة"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:290
+#, python-format
+msgid "Visa Request Approved."
+msgstr "تمت الموافقة على طلب التأشيرة."
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:347
+#, python-format
+msgid "Visa Request Created."
+msgstr "طلب التأشيرة تم إنشاؤه."
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:327
+#, python-format
+msgid "Visa Request Received."
+msgstr "طلب التأشيرة المستلمة."
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:338
+#, python-format
+msgid "Visa Request Refused."
+msgstr "طلب التأشيرة مرفوض."
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_visa_title
+msgid "Visa Title"
+msgstr "عنوان التأشيرة"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:300
+#, python-format
+msgid "Visa is In progress."
+msgstr "التأشيرة قيد التقدم."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Visa that has been approved."
+msgstr "التأشيرة التي تمت الموافقة عليها."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Visa that has been refused"
+msgstr "التأشيرة التي تم رفضها"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Visa that has been waiting for approval of Manager."
+msgstr "التأشيرة التي تنتظر موافقة المدير."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.view_visa_filter
+msgid "Visa that has sent for process."
+msgstr "التأشيرة التي أرسلت للعملية."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "Visit Visa"
+msgstr "تأشيرة زيارة"
+
+#. module: ahcec_hr_visa
+#: model:ir.actions.report,name:ahcec_hr_visa.visit_visa_new
+msgid "Visit Visa Report"
+msgstr "زيارة تقرير التأشيرات"
+
+#. module: ahcec_hr_visa
+#: selection:hr.visa,state:0
+msgid "Waiting Approval"
+msgstr "في انتظار الموافقة"
+
+#. module: ahcec_hr_visa
+#: code:addons/ahcec_hr_visa/models/hr_visa.py:133
+#, python-format
+msgid "You cannot remove the record which is in %s state!"
+msgstr "لا يمكنك إزالة السجل الموجود في حالة٪ s!"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "_____________________________"
+msgstr "_____________________________"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+msgid "a Business Visa for"
+msgstr "تأشيرة تجارية ل"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "a visit Visa for"
+msgstr "زيارة تأشيرة ل"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "and Passport No."
+msgstr "وجواز السفر."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "as a full time employee since"
+msgstr "كموظف بدوام كامل منذ ذلك الحين"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "her."
+msgstr "لها."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "him."
+msgstr "له."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "in the capacity of"
+msgstr "في قدرة"
+
+#. module: ahcec_hr_visa
+#: model:ir.model.fields,field_description:ahcec_hr_visa.field_hr_visa_name
+msgid "name"
+msgstr "اسم"
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "national, holder of ID / Iqama No."
+msgstr "وطني ، حامل بطاقة الهوية / الإقامة."
+
+#. module: ahcec_hr_visa
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.business_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.embassy_visit_visa_report_new
+#: model:ir.ui.view,arch_db:ahcec_hr_visa.visit_visa_report_new
+msgid "would like to request a visa for"
+msgstr "ترغب في طلب تأشيرة ل"
+

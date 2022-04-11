@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="view_salary_type_tree" model="ir.ui.view">
+            <field name="name">hr.salary.type.tree</field>
+            <field name="model">hr.salary.type</field>
+            <field name="arch" type="xml">
+                <tree string="Salary Type" editable="bottom">
+                    <field name="name"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="salary_type_form" model="ir.ui.view">
+            <field name="name">hr.salary.type.form</field>
+            <field name="model">hr.salary.type</field>
+            <field name="arch" type="xml">
+                <form string="Salary Type">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="sequence"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="salary_type_search" model="ir.ui.view">
+            <field name="name">hr.salary.type.search</field>
+            <field name="model">hr.salary.type</field>
+            <field name="arch" type="xml">
+                <search string="Salary Type">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_salary_type_tree" model="ir.actions.act_window">
+            <field name="name">Salary Type</field>
+            <field name="res_model">hr.salary.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Salary Type
+                </p>
+                <p>
+                    New Salary Type.
+                </p>
+            </field>
+        </record>
+        <menuitem name="Salary Type"
+                  id="menu_salary_type"
+                  parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+                  action="action_salary_type_tree" sequence="3"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--     <record model="ir.cron" id="hr_accrual_cron">-->
+<!--        <field name="name">HR Holidays Accrual Entry</field>-->
+<!--        <field name="model_id" ref="model_hr_holidays"/>-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">model.cron_leave_management()</field>-->
+<!--        <field name="interval_number">1</field>-->
+<!--        <field name="interval_type">months</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="doall" eval="False"/>-->
+<!--    </record>-->
+
+</odoo>

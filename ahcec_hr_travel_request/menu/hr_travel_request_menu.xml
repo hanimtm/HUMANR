@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem name="Travel Request" sequence="40"
+                  id="action_travel_request_main"
+                  parent="hr.menu_hr_root"/>
+
+        <menuitem action="action_travel_request"
+                  id="menu_travel_request"
+                  name="Travel Requests"
+                  parent="action_travel_request_main"
+                  groups="base.group_user"
+                  sequence="1"/>
+
+        <menuitem name="Travel Request Leave" sequence="40"
+                  id="action_travel_request_main_leave"
+                  parent="hr.menu_hr_root"/>
+
+        <menuitem action="action_travel_request"
+                  id="menu_travel_request_leave"
+                  name="Travel Requests"
+                  parent="action_travel_request_main_leave"
+                  sequence="1"/>
+    </data>
+</odoo>

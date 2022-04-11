@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="wizard_payroll_history_form" model="ir.ui.view">
+            <field name="name">wizard.payroll.history.history</field>
+            <field name="model">wizard.payroll.history</field>
+            <field name="arch" type="xml">
+                <form string="Wizard">
+                    <group>
+                        <field name="report_file" readonly="1" filename="name" nolabel="1"/>
+                        <field name="name" invisible="1"/>
+                        <field name="visible" invisible="1"/>
+                    </group>
+                    <group attrs="{'invisible': [('visible', '=', False)]}">
+                        <group>
+                            <field name="year" invisible="1"/>
+                            <field name="xlsx_date_from"/>
+                            <field name="xlsx_date_to"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="export_payroll_xls" type="object"
+                                string="Export" class="oe_highlight"
+                                context="{'xls_export':1}" icon="fa-download"
+                                attrs="{'invisible': [('visible', '=', False)]}"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_act_payroll" model="ir.actions.act_window">
+            <field name="name">Export In Excel</field>
+            <field name="res_model">wizard.payroll.history</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <!--            <field name="view_id" ref="wizard_payroll_history_form"/>-->
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_hr_payroll_report"
+                  name="Payroll Reports"
+                  parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+
+        <menuitem action="wizard_act_payroll"
+                  name="Export In Excel"
+                  id="menu_hr_payslip_run"
+                  parent="menu_hr_payroll_report"/>
+    </data>
+</odoo>
+

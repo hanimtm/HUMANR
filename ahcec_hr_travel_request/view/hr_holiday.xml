@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="inherit_edit_holiday_ticket" model="ir.ui.view">
+        <field name="name">hr.holidays</field>
+        <field name="model">hr.holidays</field>
+        <field name="inherit_id" ref ="hr_holidays.edit_holiday_new"/>
+        <field name="arch" type="xml">
+            <xpath expr ="//field[@name='payslip_status']" position="after">
+                <field name="ticket_request" invisible="1"/>
+                <field name="travellers" attrs="{'required': [('ticket_request', '=', True),('type', '=', 'remove')],'invisible': [('ticket_request', '=', False),('type', '=', 'add')]}"/>
+                <field name="dependents" attrs="{'required': [('travellers', 'in', ('employee_dependent','dependent'))],'invisible': [('travellers', '=', 'employee')]}" options="{'no_create_edit': True}" domain="[('employee_id', '=', employee_id)]" widget="many2many_tags"/>
+                <field name="request_type"/>
+                <label for="need_ticket"/>
+                <div>
+                    <field name="need_ticket" class="oe_inline" attrs="{'invisible': [('ticket_request', '=',False),('type', '=', 'add')]}" />
+                    <button class="oe_inline"  string="Create Ticket Request" name="create_ticket_request" type="object" attrs="{'invisible': [('need_ticket', '=',False),('type', '=', 'add')]}"/>
+                    <field name="ticket_id"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="inherit_holiday_status_form_ticket" model="ir.ui.view">
+        <field name="name">hr.holidays.status</field>
+        <field name="model">hr.holidays.status</field>
+        <field name="inherit_id" ref ="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <xpath expr ="//field[@name='limit']" position="after">
+                <field name="ticket_request"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<menuitem
+				id="import_employee_contract_menu"
+				name="Import Employees Contract"
+				action="import_employee_contract_wizard_action"
+				parent="ahcec_import_employee.employee_import"
+				groups="hr.group_hr_manager"
+		/>
+
+	</data>
+</odoo>

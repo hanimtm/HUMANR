@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    FOR DELETE -->
+<!--    <record id="hr_salary_rule_worker_basic" model="hr.salary.rule">-->
+<!--        <field name="amount_select">percentage</field>-->
+<!--        <field name="amount_percentage_base">contract.hourly_wage</field>-->
+<!--        <field name="quantity">worked_days.WORK100 and worked_days.WORK100.number_of_hours</field>-->
+<!--        <field name="amount_percentage">100.0</field>-->
+<!--        <field name="code">BASIC</field>-->
+<!--        <field name="category_id" ref="hr_payroll.BASIC"/>-->
+<!--        <field name="partner_id" ref="hr_houserent_register"/>-->
+<!--        <field name="name">Basic</field>-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="struct_id" ref="structure_worker_001"/>-->
+<!--    </record>-->
+
+
+    <!-- Payroll Rules -->
+    <!-- Basic -->
+<!--    <record id="hr_payroll.hr_rule_basic" model="hr.salary.rule">-->
+<!--        <field name="name">Basic</field>-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="code">BASIC</field>-->
+<!--&lt;!&ndash;        <field name="quantity">0.0</field>&ndash;&gt;-->
+<!--        <field name="category_id" ref="hr_payroll.BASIC"/>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--&lt;!&ndash;        <field name="amount_percentage">0.0</field>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <field name="amount_python_compute">if contract.amendment_count > 0: result=(payslip.get_basics(payslip.date_from,payslip.date_to))&ndash;&gt;-->
+<!--        &lt;!&ndash;                                            else : result = (contract.wage * payslip.payment_days) / payslip.month_days</field>&ndash;&gt;-->
+<!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'basic',contract.wage)</field>-->
+<!--        &lt;!&ndash; <field name="amount_python_compute">result = ((contract.wage/1.35)*payslip.payment_days)/30</field> &ndash;&gt;-->
+<!--        <field name="struct_id" ref="structure_worker_001"/>-->
+<!--    </record>-->
+
+
+    <!--   <record id="ahcec_hr_contract.hr_salary_rule_houserentallowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Housing Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">HRA</field>-->
+    <!--        <field name="sequence" eval="2"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        &lt;!&ndash; <field name="condition_select">python</field> &ndash;&gt;-->
+    <!--        &lt;!&ndash; <field name="condition_python">result = employee.duration_in_months&lt;1</field> &ndash;&gt;-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'hra',contract.HRA)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_houserentallowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_houserentallowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Housing Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">HRA</field>-->
+    <!--        <field name="sequence" eval="2"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'hra',contract.HRA)</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_houserentallowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_houserentallowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Housing Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">HRA</field>-->
+    <!--        <field name="sequence" eval="2"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'hra',contract.HRA)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_houserentallowance"/>-->
+    <!--    </record>-->
+
+
+    <!--Transportation Allowance-->
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_transportationallowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Transportation Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">TRNS</field>-->
+    <!--        <field name="sequence" eval="3"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        &lt;!&ndash; <field name="condition_select">python</field> &ndash;&gt;-->
+    <!--        &lt;!&ndash; <field name="condition_python">result = employee.duration_in_months&lt;1</field> &ndash;&gt;-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'transport',contract.TA)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_transportationallowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_transportationallowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Transportation Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">TRNS</field>-->
+    <!--        <field name="sequence" eval="3"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'transport',contract.TA)</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_transportationallowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_transportationallowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Transportation Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">TRNS</field>-->
+    <!--        <field name="sequence" eval="3"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'transport',contract.TA)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_transportationallowance"/>-->
+    <!--    </record>-->
+
+    <!--C & SD Allowance Allowance-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_c_sd_allowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">C &amp; SD Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">CSD</field>-->
+    <!--        <field name="sequence" eval="4"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        &lt;!&ndash; <field name="condition_select">python</field> &ndash;&gt;-->
+    <!--        &lt;!&ndash; <field name="condition_python">result = employee.duration_in_months&lt;1</field> &ndash;&gt;-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'csd',contract.cda)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_c_sd_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_c_sd_allowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">C &amp; SD Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">CSD</field>-->
+    <!--        <field name="sequence" eval="4"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'csd',contract.cda)</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_c_sd_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_c_sd_allowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">C &amp; SD Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">CSD</field>-->
+    <!--        <field name="sequence" eval="4"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'csd',contract.cda)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_c_sd_allowance"/>-->
+    <!--    </record>-->
+
+    <!--Mobile Allowance-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_mobile_allowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Mobile Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">MOBILE</field>-->
+    <!--        <field name="sequence" eval="5"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        &lt;!&ndash; <field name="condition_select">python</field> &ndash;&gt;-->
+    <!--        &lt;!&ndash; <field name="condition_python">result = employee.duration_in_months&lt;1</field> &ndash;&gt;-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'mobile',contract.mobile_allowance)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_mobile_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_mobile_allowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Mobile Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">MOBILE</field>-->
+    <!--        <field name="sequence" eval="5"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'mobile',contract.mobile_allowance)-->
+    <!--        </field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_mobile_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_mobile_allowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Mobile Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">MOBILE</field>-->
+    <!--        <field name="sequence" eval="5"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'mobile',contract.mobile_allowance)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_mobile_allowance"/>-->
+    <!--    </record>-->
+
+    <!--Shift Allowance Allowance-->
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_shift_allowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Shift Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">SHIFT</field>-->
+    <!--        <field name="sequence" eval="6"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'shift',contract.shift_allow)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_shift_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_shift_allowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Shift Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">SHIFT</field>-->
+    <!--        <field name="sequence" eval="6"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'shift',contract.shift_allow)</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_shift_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_shift_allowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Shift Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">SHIFT</field>-->
+    <!--        <field name="sequence" eval="6"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'shift',contract.shift_allow)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_shift_allowance"/>-->
+    <!--    </record>-->
+
+    <!--Remote Allowance Allowance-->
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_remote_allowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Remote Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">REMOTE</field>-->
+    <!--        <field name="sequence" eval="7"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'remote',contract.remote_allow)</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_remote_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_remote_allowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Remote Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">REMOTE</field>-->
+    <!--        <field name="sequence" eval="7"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'remote',contract.remote_allow)</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_remote_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_remote_allowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Remote Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">REMOTE</field>-->
+    <!--        <field name="sequence" eval="7"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.get_basics(payslip,'remote',contract.remote_allow)</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_remote_allowance"/>-->
+    <!--    </record>-->
+
+    <!--Other Allowance Allowance-->
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_other_allowance_child1" model="hr.salary.rule">-->
+    <!--        <field name="name">Other Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">OTHER</field>-->
+    <!--        <field name="sequence" eval="8"/>-->
+    <!--        <field name="condition_select">range</field>-->
+    <!--        <field name="condition_range">employee.duration_in_months</field>-->
+    <!--        <field name="condition_range_max">1</field>-->
+    <!--        <field name="amount_python_compute">result = contract.other_allow</field>-->
+    <!--        <field name="note">Based on joining date in first month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_other_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_other_allowance_child2" model="hr.salary.rule">-->
+    <!--        <field name="name">Other Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">OTHER</field>-->
+    <!--        <field name="sequence" eval="8"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = employee.duration_in_months > 1</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.other_allow</field>-->
+    <!--        <field name="note">Fixed from contract from second month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_other_allowance"/>-->
+    <!--    </record>-->
+
+    <!--    <record id="ahcec_hr_contract.hr_salary_rule_other_allowance_child3" model="hr.salary.rule">-->
+    <!--        <field name="name">Other Allowance</field>-->
+    <!--        <field name="category_id" ref="hr_payroll.ALW"/>-->
+    <!--        <field name="code">OTHER</field>-->
+    <!--        <field name="sequence" eval="8"/>-->
+    <!--        <field name="condition_select">python</field>-->
+    <!--        <field name="condition_python">result = contract.is_leaving or employee.date_of_leave</field>-->
+    <!--        <field name="amount_select">code</field>-->
+    <!--        <field name="amount_python_compute">result = contract.other_allow</field>-->
+    <!--        <field name="note">If employee is leaving then it will calculate based on no of days of that month</field>-->
+    <!--        <field name="parent_rule_id" ref="ahcec_hr_contract.hr_salary_rule_other_allowance"/>-->
+    <!--    </record>-->
+</odoo>

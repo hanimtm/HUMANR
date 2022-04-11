@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="hr_salary_rule_form" model="ir.ui.view">
+            <field name="name">hr.salary.rule.form.type</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sequence']" position="after">
+                    <field name="type"/>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="view_hr_other_salary_rule_tree" model="ir.ui.view">
+            <field name="name">hr.other.salary.rule.tree</field>
+            <field name="model">hr.other.salary.rule</field>
+            <field name="arch" type="xml">
+                <tree string="Additional Allowance &amp; Deduction Rule" editable="bottom">
+                    <field name="name"/>
+                    <field name="operation_type"/>
+                    <field name="type"/>
+                    <field name="account_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_other_salary_rule_form" model="ir.ui.view">
+            <field name="name">hr.other.salary.rule.form</field>
+            <field name="model">hr.other.salary.rule</field>
+            <field name="arch" type="xml">
+                <form string="Additional Allowance &amp; Deduction Rule">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="operation_type"/>
+                            <field name="type"/>
+                            <field name="account_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_other_salary_rule_search" model="ir.ui.view">
+            <field name="name">hr.other.salary.rule.search</field>
+            <field name="model">hr.other.salary.rule</field>
+            <field name="arch" type="xml">
+                <search string="Additional Allowance &amp; Deduction Rule">
+                    <field name="name"/>
+                    <separator/>
+                    <filter string="Type" name="operation_type"/>
+                    <separator/>
+                    <filter string="Type" name="type"/>
+                    <separator/>
+                    <filter string="Type" name="account_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hr_other_salary_rule" model="ir.actions.act_window">
+            <field name="name">Other Salary Rule</field>
+            <field name="res_model">hr.other.salary.rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Salary additional rule
+                </p>
+                <p>
+                    Salary additional rule.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Other Salary Rule"
+                  action="action_hr_other_salary_rule"
+                  id="menu_hr_other_salary_rule"
+                  parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+                  groups="hr.group_hr_manager,account.group_account_user"/>
+
+    </data>
+</odoo>

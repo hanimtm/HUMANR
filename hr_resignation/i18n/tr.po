@@ -1,0 +1,256 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_resignation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-21 02:02+0000\n"
+"PO-Revision-Date: 2020-05-21 06:02+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: tr\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: hr_resignation
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
+msgid "Approve"
+msgstr "Onayla"
+
+#. module: hr_resignation
+#: selection:hr.resignation,state:0
+msgid "Approved"
+msgstr "Onaylandı"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_approved_revealing_date
+msgid "Approved Date"
+msgstr "Onay tarihi"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,help:hr_resignation.view_approved_resignation
+#: model:ir.actions.act_window,name:hr_resignation.view_approved_resignation
+#: model:ir.ui.menu,name:hr_resignation.employee_resignation_approved
+msgid "Approved Resignation"
+msgstr "Onaylanan İstifa"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:114
+#, python-format
+msgid "Approved releaving date must be anterior to confirmed date"
+msgstr "Onaylanan bırakma tarihi, teyit edilen tarihin önünde olmalıdır"
+
+#. module: hr_resignation
+#: selection:hr.resignation,state:0
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: hr_resignation
+#: selection:hr.resignation,state:0
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
+msgid "Confirm"
+msgstr "Onayla"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_create_uid
+msgid "Created by"
+msgstr "Oluşturan"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_create_date
+msgid "Created on"
+msgstr "Oluşturulma"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_expected_revealing_date
+msgid "Date on which he is revealing from the company"
+msgstr "Şirketten bildirilen tarih"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_resign_confirm_date
+msgid "Date on which the request is confirmed"
+msgstr "İsteğin onaylandığı tarih"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_department_id
+msgid "Department"
+msgstr "Departman"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_department_id
+msgid "Department of the employee"
+msgstr "Çalışanın Departmanı"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_display_name
+msgid "Display Name"
+msgstr "Görünüm Adı"
+
+#. module: hr_resignation
+#: selection:hr.resignation,state:0
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: hr_resignation
+#: model:ir.model,name:hr_resignation.model_hr_employee
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_employee_id
+msgid "Employee"
+msgstr "Personel"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.view_employee_resignation
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_tree
+msgid "Employee Resignation"
+msgstr "Çalışanın istifa süreci yönetimi"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,help:hr_resignation.view_employee_resignation
+msgid "Employee Resignation Form"
+msgstr "Çalışan İstifa Formu"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:111
+#, python-format
+msgid "Enter Approved Releaving Date"
+msgstr "Onaylanan Başlangıç ​​Tarihini Girin"
+
+#. module: hr_resignation
+#: model:ir.actions.server,name:hr_resignation.ir_cron_data_employee_resignation_ir_actions_server
+#: model:ir.cron,cron_name:hr_resignation.ir_cron_data_employee_resignation
+#: model:ir.cron,name:hr_resignation.ir_cron_data_employee_resignation
+msgid "HR Resignation: update employee"
+msgstr "İK İstifa: çalışanı güncelle"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_joined_date
+msgid "Join Date"
+msgstr "Katılma Tarihi"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_joined_date
+msgid "Joining date of the employee"
+msgstr "Çalışanın katılma tarihi"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation___last_update
+msgid "Last Modified on"
+msgstr "Son Güncelleme"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_employee_id
+msgid "Name of the employee for whom the request is creating"
+msgstr "Talebin yaratıldığı çalışanın adı"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:21
+#: code:addons/hr_resignation/models/hr_resignation.py:44
+#: code:addons/hr_resignation/models/hr_resignation.py:45
+#, python-format
+msgid "New"
+msgstr "Yeni"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_notice_period
+msgid "Notice Period"
+msgstr "İhbar süresi"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_name
+msgid "Order Reference"
+msgstr "Talep Referansı"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_reason
+msgid "Reason"
+msgstr "Sebep"
+
+#. module: hr_resignation
+#: model:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
+msgid "Reject"
+msgstr "Reddet"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_expected_revealing_date
+msgid "Releaving Date"
+msgstr "Çıkış tarihi"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:89
+#, python-format
+msgid "Releaving date must be anterior to joining date"
+msgstr "Çıkış tarihi, katılma tarihinin önünde olmalıdır"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_employee_resign_date
+msgid "Resign Date"
+msgstr "İstifa Tarihi"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_resign_confirm_date
+msgid "Resign confirm date"
+msgstr "İstifa onay tarihi"
+
+#. module: hr_resignation
+#: model:ir.ui.menu,name:hr_resignation.employee_resignation
+msgid "Resignation"
+msgstr "istifa"
+
+#. module: hr_resignation
+#: model:ir.ui.menu,name:hr_resignation.employee_resignation_request
+msgid "Resignation Request"
+msgstr "İstifa İsteği"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_reason
+msgid "Specify reason for leaving the company"
+msgstr "Şirketten ayrılma nedeninizi belirtin"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation_state
+msgid "Status"
+msgstr "Durumu"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation_approved_revealing_date
+msgid "The date approved for the releaving"
+msgstr "Çıkış için onaylanan tarih"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:66
+#: code:addons/hr_resignation/models/hr_resignation.py:86
+#, python-format
+msgid "There is a resignation request in confirmed or approved state for this employee"
+msgstr "Bu çalışan için onaylanmış veya onaylanmış bir istifa talebi var"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:55
+#, python-format
+msgid "You cannot create request for other employees"
+msgstr "Diğer çalışanlar için istek oluşturamazsınız"
+
+#. module: hr_resignation
+#: model:ir.model,name:hr_resignation.model_hr_resignation
+msgid "hr.resignation"
+msgstr "hr.resignation"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Leaves Deduction -->
+<!--    <record id="hr_salary_rule_leave_deduction" model="hr.salary.rule">-->
+<!--        <field name="name">Leaves Deduction</field>-->
+<!--        <field name="category_id" ref="hr_payroll.DED"/>-->
+<!--        <field name="code">Unpaid Leave</field>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="condition_python">result = (worked_days.unpaid_leave and worked_days.unpaid_leave.number_of_days >-->
+<!--            0)-->
+<!--        </field>-->
+<!--        <field name="sequence" eval="120"/>-->
+<!--        <field name="amount_select">code</field>-->
+<!--        <field name="amount_python_compute">result=-(((contract.wage+categories.ALW)/payslip.month_days)*-->
+<!--            ((worked_days.unpaid_leave and worked_days.unpaid_leave.number_of_days)-->
+<!--            +(worked_days.sick_leaves and worked_days.sick_leaves.number_of_days)-->
+<!--            +(worked_days.maternity_leave and worked_days.maternity_leave.number_of_days)) or 0)-->
+<!--        </field>-->
+<!--    </record>-->
+    <record id="worth_pay" model="hr.salary.rule.category">
+        <field name="name">WORTH BASIC</field>
+        <field name="code">worth_pay</field>
+    </record>
+    <record id="worth_leave" model="hr.salary.rule.category">
+        <field name="name">WORTH VAC</field>
+        <field name="code">worth_leave</field>
+    </record>
+
+<!--    <record id="hr_salary_rule_new_worth_pay" model="hr.salary.rule">-->
+<!--        <field name="name">Worth Pay</field>-->
+<!--        <field name="category_id" ref="worth_pay"/>-->
+<!--        <field name="code">WORTH_PAY</field>-->
+<!--        <field name="condition_select">none</field>-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="amount_select">code</field>-->
+<!--        <field name="amount_python_compute">result=(categories.BASIC - payslip.vacation_pay)</field>-->
+<!--    </record>-->
+<!--    <record id="hr_salary_rule_new_annual_leave" model="hr.salary.rule">-->
+<!--        <field name="name">Vacation Pay</field>-->
+<!--        <field name="category_id" ref="worth_leave"/>-->
+<!--        <field name="code">VAC_PAY</field>-->
+<!--        <field name="condition_select">none</field>-->
+<!--        <field name="sequence" eval="1"/>-->
+<!--        <field name="amount_select">code</field>-->
+<!--        <field name="amount_python_compute">result=payslip.vacation_pay</field>-->
+<!--    </record>-->
+
+
+    <!--     Salary Structure-->
+<!--    <record id="hr_payroll.structure_base" model="hr.payroll.structure">-->
+<!--        <field name="name">Company Salary Structures</field>-->
+<!--        <field name="rule_ids"-->
+<!--               eval="[(4,ref('hr_salary_rule_new_worth_pay')),(4,ref('hr_salary_rule_new_annual_leave'))]"/>-->
+<!--        <field name="company_id" ref="base.main_company"/>-->
+<!--    </record>-->
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_contract_amendment_hof,access_contract_amendment_hof,model_contract_amendment,ahcec_hr.group_hof,1,1,1,0
+access_contract_amendment_user,access_contract_amendment_userf,model_contract_amendment,base.group_user,1,0,0,0
+access_contract_package_line_hof,access_contract_package_line_hof,model_contract_package_line,ahcec_hr.group_hof,1,1,1,0
+access_contract_package_line_user,access_contract_package_line_user,model_contract_package_line,base.group_user,1,0,0,0

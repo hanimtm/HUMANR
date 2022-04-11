@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="leaves_adjustment_view">
+        <field name="name">Leaves Adjustment</field>
+        <field name="model">leaves.adjustment</field>
+        <field name="arch" type="xml">
+            <form string="Leaves Adjustment">
+                <group>
+                    <field name="count"/>
+                </group>
+                <footer>
+                    <button string="OK" name="adjustment_leave" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_leaves_adjustment">
+        <field name="name">Mass Leaves Adjustment</field>
+        <field name="res_model">leaves.adjustment</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

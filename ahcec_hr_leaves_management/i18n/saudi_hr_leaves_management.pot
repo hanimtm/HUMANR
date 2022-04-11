@@ -1,0 +1,616 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ahcec_hr_leaves_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-30 12:24+0000\n"
+"PO-Revision-Date: 2015-04-30 12:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,active:0
+msgid "Active"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:leaves.allocation,target:0
+msgid "All Employee"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,number_of_days_temp:0
+msgid "Allocation"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,carry_forward:0
+msgid "Allow to Carry Forward"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,skip:0
+msgid "Allow to Skip"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: help:hr.holidays.status,skip:0
+msgid "Allow to skip in Weekends"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,hr_validation:0
+#: field:hr.holidays.status,hr_validation:0
+msgid "Apply HR Validation"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "Approve"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:res.weekdays,calendar_ids:0
+msgid "Calendars"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+msgid "Cancel"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,carry_forward:0
+#: field:hr.holidays,carry_forward_limit:0
+#: field:hr.holidays,carry_forwarded:0
+#: field:leaves.allocation,carry_forward:0
+#: field:leaves.allocation,carry_forward_limit:0
+msgid "Carry Forward"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,carry_forward_check:0
+msgid "Carry Forward Check"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_public_holidays_form
+#: selection:hr.holidays.public,state:0
+msgid "Close"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:res.weekdays,code:0
+msgid "Code"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,company_id:0
+#: field:leaves.allocation,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_compassionate
+msgid "Compassionate Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,create_uid:0
+#: field:hr.holidays.public.line,create_uid:0
+#: field:leaves.allocation,create_uid:0
+#: field:leaves.allocation.employee,create_uid:0
+#: field:res.weekdays,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,create_date:0
+#: field:hr.holidays.public.line,create_date:0
+#: field:leaves.allocation,create_date:0
+#: field:leaves.allocation.employee,create_date:0
+#: field:res.weekdays,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,date:0
+msgid "Date"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:res.weekdays,name:0
+msgid "Day"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.actions.act_window,name:ahcec_hr_leaves_management.action_res_weekdays_tree
+msgid "Days of Week"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:res.weekdays:ahcec_hr_leaves_management.res_weekdays_form
+#: view:res.weekdays:ahcec_hr_leaves_management.res_weekdays_tree
+msgid "Days of week"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation.employee,department_id:0
+msgid "Department"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:leaves.allocation,target:0
+msgid "Department Wise"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,department_ids:0
+msgid "Departments"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+#: field:leaves.allocation,description:0
+msgid "Description"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:367
+#, python-format
+msgid "Effective date must be between %s and %s"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+#: field:leaves.allocation.employee,employee_id:0
+msgid "Employee"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,employee_code:0
+#: field:leaves.allocation.employee,employee_code:0
+msgid "Employee Code"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,employee_ids:0
+msgid "Employees"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public.line,end_date:0
+msgid "End Date"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:409
+#, python-format
+msgid "End Date must be between %s and %s"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "Extra Information"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,fiscalyear:0
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_hr_holidays_public_filter
+#: field:hr.holidays.public,fiscalyear:0
+#: field:leaves.allocation,fiscalyear:0
+msgid "Fiscal Year"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Friday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_hr_holidays_public_filter
+msgid "Group By..."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,hr_manager_id:0
+msgid "HR Approval"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "HR Validate"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_hajj
+msgid "Hajj Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public.line,holidays_id:0
+msgid "Holiday Calendar Year"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,line_ids:0
+msgid "Holiday Dates"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,id:0
+#: field:hr.holidays.public.line,id:0
+#: field:leaves.allocation,id:0
+#: field:leaves.allocation.employee,id:0
+#: field:res.weekdays,id:0
+msgid "ID"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+msgid "Invitation details"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,job_ids:0
+msgid "JOB Profiles"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:leaves.allocation,target:0
+msgid "Job Profile Wise"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,write_uid:0
+#: field:hr.holidays.public.line,write_uid:0
+#: field:leaves.allocation,write_uid:0
+#: field:leaves.allocation.employee,write_uid:0
+#: field:res.weekdays,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public,write_date:0
+#: field:hr.holidays.public.line,write_date:0
+#: field:leaves.allocation,write_date:0
+#: field:leaves.allocation.employee,write_date:0
+#: field:res.weekdays,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.model,name:ahcec_hr_leaves_management.model_hr_holidays
+msgid "Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:563
+#, python-format
+msgid "Leave Request"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.model,name:ahcec_hr_leaves_management.model_hr_holidays_status
+#: field:leaves.allocation,holiday_status_id:0
+msgid "Leave Type"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:calendar.event.type,name:ahcec_hr_leaves_management.categ_leaves
+msgid "Leaves"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.actions.act_window,name:ahcec_hr_leaves_management.action_view_leaves_allocation
+#: model:ir.model,name:ahcec_hr_leaves_management.model_leaves_allocation
+#: model:ir.ui.menu,name:ahcec_hr_leaves_management.menu_leaves_allocation_action
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+#: field:leaves.allocation.employee,leaves_allocation_id:0
+msgid "Leaves Allocation"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.model,name:ahcec_hr_leaves_management.model_leaves_allocation_employee
+msgid "Leaves Allocation Employee"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,limit:0
+msgid "Limit"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_marriage
+msgid "Marriage Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,maternity_leave:0
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_maternity
+msgid "Maternity Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: help:hr.holidays.status,carry_forward_leaves:0
+msgid "Maximum Leaves Allowed - Leaves Already Taken"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Monday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_hr_holidays_public_filter
+#: field:hr.holidays.public,name:0
+#: field:hr.holidays.public.line,name:0
+msgid "Name"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,branch_ids:0
+msgid "Office"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:leaves.allocation,target:0
+msgid "Office Wise"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,one_time_usable:0
+msgid "One Time Used"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:hr.holidays.public,state:0
+msgid "Open"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,override:0
+msgid "Override"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays,override_limit:0
+#: field:leaves.allocation,override_limit:0
+msgid "Override Limit"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_paternity
+msgid "Paternity Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:403
+#, python-format
+msgid "Please Define the Fiscal Year for this leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:360
+#, python-format
+msgid "Please define the Fiscal Year for this leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:358
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:399
+#, python-format
+msgid "Please select leave type."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_public_holidays_form
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_public_holidays_tree
+#: view:hr.holidays.public.line:ahcec_hr_leaves_management.view_public_holiday_line_tree
+#: model:ir.actions.act_window,name:ahcec_hr_leaves_management.open_public_holidays_view
+#: model:ir.model,name:ahcec_hr_leaves_management.model_hr_holidays_public
+#: model:ir.ui.menu,name:ahcec_hr_leaves_management.menu_public_holidays_view
+msgid "Public Holidays"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.model,name:ahcec_hr_leaves_management.model_hr_holidays_public_line
+msgid "Public Holidays Lines"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "Refuse"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,carry_forward_leaves:0
+msgid "Remaining Leaves"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:632
+#, python-format
+msgid "Request approved, waiting hr validation."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_public_holidays_form
+msgid "Reset to Open"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:ir.model,name:ahcec_hr_leaves_management.model_resource_calendar
+msgid "Resource Calendar"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,user_id:0
+msgid "Responsible"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Saturday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_hr_holidays_public_filter
+msgid "Search Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: model:hr.holidays.status,name:ahcec_hr_leaves_management.holiday_status_secondment
+msgid "Secondment Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.status,sick_leave:0
+msgid "Sick Leave"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:hr.holidays.public.line,start_date:0
+msgid "Start Date"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays.public:ahcec_hr_leaves_management.view_hr_holidays_public_filter
+#: field:hr.holidays.public,state:0
+msgid "Status"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "Submit to Manager"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Sunday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,target:0
+msgid "Target Group"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:leaves.allocation,name:0
+msgid "Task Name"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+msgid "Task Summary"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:485
+#, python-format
+msgid "The number of remaining leaves is not sufficient for this leave type.\n"
+"Please verify also the leaves waiting for validation."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:401
+#: sql_constraint:hr.holidays.public.line:0
+#, python-format
+msgid "The start date must be anterior to the end date."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:513
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:516
+#, python-format
+msgid "There are not enough %s allocated for employee %s; please contact your HR People for this leave type."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:522
+#, python-format
+msgid "There are not enough %s remaining leaves for employee %s; please contact your HR People for this leave type."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: help:hr.holidays,hr_manager_id:0
+msgid "This area is automaticly filled by the user who validate the leave with HR level (If Leave type need HR validation)"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Thursday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:100
+#, python-format
+msgid "Too many active contracts for employee %s"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Tuesday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:hr.holidays:ahcec_hr_leaves_management.edit_holiday_new
+msgid "Validate"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: selection:res.weekdays,name:0
+msgid "Wednesday"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: field:resource.calendar,weekend_ids:0
+msgid "Weekends"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: help:hr.holidays.status,hr_validation:0
+msgid "When selected, the Allocation/Leave Requests for this type require a hr validation to be approved."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:318
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:347
+#, python-format
+msgid "You can not allocate this leave to this employee"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: constraint:hr.holidays.status:0
+msgid "You can not have 2 leaves which can be defined as carry forward!"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_holidays.py:296
+#, python-format
+msgid "You cannot delete a leave which is in %s state."
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: code:addons/ahcec_hr_leaves_management/models/hr_public_holidays.py:42
+#, python-format
+msgid "You cannot remove the record which is in %s state!"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+msgid "days"
+msgstr ""
+
+#. module: ahcec_hr_leaves_management
+#: view:leaves.allocation:ahcec_hr_leaves_management.leaves_allocation_view
+msgid "or"
+msgstr ""
+

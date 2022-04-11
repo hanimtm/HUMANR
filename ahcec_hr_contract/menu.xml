@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem action="hr_contract.action_hr_contract"
+              id="hr_contract.hr_menu_contract"
+              parent="hr.menu_hr_main"
+              name="Contracts" sequence="4"
+              groups="hr.group_hr_manager"/>
+    <menuitem id="menu_employee_accrual"
+              name="Employee Accruals"
+              parent="account.menu_finance_configuration"
+              groups="base.group_user"
+              sequence="99"/>
+    <menuitem action="open_accrual_wizard_action"
+              id="menu_generate_accrual"
+              name="Generate Accruals"
+              parent="menu_employee_accrual"
+              groups="base.group_user"
+              sequence="1"/>
+    <menuitem action="action_employee_accrual"
+              id="sub_employee_accrual"
+              name="Employee Accruals"
+              parent="menu_employee_accrual"
+              groups="base.group_user"
+              sequence="2"/>
+</odoo>

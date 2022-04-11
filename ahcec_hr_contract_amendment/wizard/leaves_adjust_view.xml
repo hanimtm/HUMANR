@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <record id="leave_adjustment_cron" model="ir.cron">-->
+<!--        <field name="name">Leave : Adjustment</field>-->
+<!--        <field name="model_id" ref="model_hr_holidays"/>-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">model.adjustment_leave_new()</field>-->
+<!--        <field name="interval_number">1</field>-->
+<!--        <field name="interval_type">months</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="doall" eval="False"/>-->
+<!--        <field name="active" eval="False"/>-->
+<!--    </record>-->
+
+    <record model="ir.ui.view" id="id_leaves_adjustment_view">
+        <field name="name">Leaves Adjustment</field>
+        <field name="model">leaves.adjustment</field>
+        <field name="inherit_id" ref="ahcec_hr_leaves_management.leaves_adjustment_view"/>
+        <field name="arch" type="xml">
+<!--            <xpath expr="//field[@name='count']" position="before">-->
+<!--                <field name="day_from"/>-->
+<!--                <field name="day_end"/>-->
+<!--            </xpath>-->
+            <xpath expr="//button[@name='adjustment_leave']" position="attributes">
+                <attribute name="name">adjustment_leave_new</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

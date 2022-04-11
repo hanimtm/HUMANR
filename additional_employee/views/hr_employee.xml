@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_employee_form_view_inherit" model="ir.ui.view">
+            <field name="name">Add Field City On hr_employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='country_of_birth']" position="after">
+                    <field name="city"/>
+                    <field name="work_iqama"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

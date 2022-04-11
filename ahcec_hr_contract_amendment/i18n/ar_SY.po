@@ -1,0 +1,305 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ahcec_hr_contract_amendment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-12 10:00+0000\n"
+"PO-Revision-Date: 2018-09-12 10:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: selection:transfer.employee,state:0
+msgid "Approved"
+msgstr "وافق"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_approved_date
+msgid "Approved Date"
+msgstr "التسجيل المعتمدة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_approved_by
+msgid "Approved by"
+msgstr "التي وافقت عليها"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+#: selection:transfer.employee,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+#: selection:transfer.employee,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_hr_contract_id
+msgid "Contract"
+msgstr "العقد "
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.actions.act_window,name:ahcec_hr_contract_amendment.action_transfer_employee_view
+#: model:ir.ui.menu,name:ahcec_hr_contract_amendment.menu_transfer_employee
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_tree_view
+msgid "Contract Amendment"
+msgstr "تعديل العقد"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Contract Information"
+msgstr "معلومات العقد"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_description
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+#: selection:transfer.employee,state:0
+msgid "Done"
+msgstr "منتهي"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: selection:transfer.employee,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_effective_date
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Effective Date"
+msgstr "تاريخ مؤثر"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_employee_id
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Extra Information"
+msgstr "معلومات اضافية"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Filter"
+msgstr "فلتر"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "From"
+msgstr "مِن"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_department_id
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "From Department"
+msgstr "من قسم"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_grade_id
+msgid "From Grade"
+msgstr "من الصف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_job_id
+msgid "From Job"
+msgstr "من العمل"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "From Job Position"
+msgstr "من الوظيفة الوظيفة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_branch_id
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "From Office"
+msgstr "من المكتب"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "New Grade"
+msgstr "درجة جديدة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "New Job"
+msgstr "عمل جديد"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Select Employee running contract..."
+msgstr "حدد عقد تشغيل الموظف ..."
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Select Employee..."
+msgstr "حدد الموظف ..."
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "To"
+msgstr "إلى"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_new_department_id
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "To Department"
+msgstr "إلى القسم"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_new_grade_id
+msgid "To Grade"
+msgstr "إلى الصف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_new_job_id
+msgid "To Job"
+msgstr "إلى وظيفة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "To Job Position"
+msgstr "لوظيفة الوظيفة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_new_branch_id
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+msgid "To Office"
+msgstr "إلى المكتب"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model,name:ahcec_hr_contract_amendment.model_transfer_employee
+msgid "Transfer Employee"
+msgstr "نقل الموظف"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_form_view
+#: selection:transfer.employee,state:0
+msgid "Validate"
+msgstr "اعتماد "
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_validated_date
+msgid "Validated Date"
+msgstr "تاريخ التحقق"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.model.fields,field_description:ahcec_hr_contract_amendment.field_transfer_employee_validated_by
+msgid "Validated by"
+msgstr "تم التحقق من صحتها بواسطة"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Visa                     that has been approved"
+msgstr "التأشيرة التي تمت الموافقة عليها"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Visa that                     has been refused"
+msgstr "التأشيرة التي تم رفضها"
+
+#. module: ahcec_hr_contract_amendment
+#: model:ir.ui.view,arch_db:ahcec_hr_contract_amendment.transfer_employee_filter
+msgid "Visa that                     has been waiting for approval"
+msgstr "التأشيرة التي تنتظر الموافقة"
+
+#. module: ahcec_hr_contract_amendment
+#: code:addons/ahcec_hr_contract_amendment/models/transfer_employee.py:117
+#, python-format
+msgid "You can't Confirm Contract Amendment because %s have Prohibit Benefit Upgrades Warning."
+msgstr "لا يمكنك تأكيد تعديل العقد نظرًا لقيام٪ s بتحذير "رفض الحصول على مخصصات"."
+
+#. module: ahcec_hr_contract_amendment
+#: code:addons/ahcec_hr_contract_amendment/models/transfer_employee.py:108
+#, python-format
+msgid "You cannot remove the record which is in %s state!"
+msgstr "لا يمكنك إزالة السجل الموجود في حالة٪ s!"
+

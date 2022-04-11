@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_hr_employee_view_form2_inherit" model="ir.ui.view">
+        <field name="name">hr.hr.employee.view.form2</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="replace">
+                <field name="parent_id" string="Is Head of Function"/>
+            </field>
+            <xpath expr="//field[@name='place_of_birth']" position="attributes">
+                <attribute name="placeholder">Place Of Birth</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_view_inherit_overtime_form1" model="ir.ui.view">
+        <field name="name">hr.contract.view.inherit.overtime.form1</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <!--        <field name="priority" eval="8"/>-->
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="replace">
+                <notebook>
+                    <page string="Information" name="information">
+                        <group col="2" name="salary_and_advantages" string="Salary and Advantages">
+                            <field name="wage" string="Basic"/>
+                            <separator string="Housing Allowance"/>
+                            <field name="is_HRA"/>
+                            <field name="HRA"
+                                   attrs="{'invisible': [('is_HRA','!=',True)], 'required': [('is_HRA','=',True)]}"/>
+                            <separator string="Transportation Allowance"/>
+                            <field name="is_TA"/>
+                            <field name="TA"
+                                   attrs="{'invisible': [('is_TA','!=',True)], 'required': [('is_TA','=',True)]}"/>
+                            <separator string="C &amp; SD Allowance"/>
+                            <field name="is_cda"/>
+                            <field name="cda"
+                                   attrs="{'invisible': [('is_cda','!=',True)], 'required': [('is_cda','=',True)]}"/>
+                            <separator string="Mobile Allowance"/>
+                            <field name="mobile"/>
+                            <field name="mobile_allowance"
+                                   attrs="{'invisible': [('mobile','!=',True)], 'required': [('mobile','=',True)]}"/>
+                            <separator string="Shift Allowance"/>
+                            <field name="is_shift_allow"/>
+                            <field name="shift_allow"
+                                   attrs="{'invisible': [('is_shift_allow','!=',True)], 'required': [('is_shift_allow','=',True)]}"/>
+                            <separator string="Remote Area Allowance"/>
+                            <field name="is_remote_allow"/>
+                            <field name="remote_allow"
+                                   attrs="{'invisible': [('is_remote_allow','!=',True)], 'required': [('is_remote_allow','=',True)]}"/>
+                            <separator string="Other Allowance"/>
+                            <field name="is_other_allow"/>
+                            <field name="other_allow"
+                                   attrs="{'invisible': [('is_other_allow','!=',True)], 'required': [('is_other_allow','=',True)]}"/>
+
+                            <!--                            <field name="advantages" nolabel="1" placeholder="Advantages..." colspan="2"/>-->
+                        </group>
+                        <group name="Total" string="Total" col="4">
+                            <field name="total_salary"/>
+                            <field name="hr_rate"/>
+                            <field name="ot_rate"/>
+                        </group>
+                        <group name="duration_group" string="Duration">
+                            <label for="date_start" string="Duration"/>
+                            <div>
+                                <field name="date_start" class="oe_inline"/>
+                                -
+                                <field name="date_end" class="oe_inline"/>
+                            </div>
+                            <field name="resource_calendar_id" required="0"/>
+                            <field name="is_leaving" attrs="{'invisible':[('is_leaving','=',False)]}"/>
+                            <label for="notice_start_date" string="Leaving Notice Period "
+                                   attrs="{'invisible':[('is_leaving','=',False)]}"/>
+                            <div attrs="{'invisible':[('is_leaving','=',False)]}">
+                                <field name="notice_start_date" class="oe_inline"/>
+                                -
+                                <field name="notice_end_date" class="oe_inline"/>
+                            </div>
+                        </group>
+                        <separator string="Notes"/>
+                        <field name="notes"/>
+                    </page>
+                    <page string="Allowances">
+                        <group name="other_allowance" string="Allowances">
+
+                            <group name="Bonus" string="Bonus" col="2">
+                                <field name="signon_bonus"/>
+                                <field name="signon_bonus_amount"
+                                       attrs="{'invisible': [('signon_bonus','!=',True)], 'required': [('signon_bonus','=',True)]}"/>
+                                <field name="period_ids" widget="many2many_tags"
+                                       attrs="{'invisible': [('signon_bonus','!=',True)], 'required': [('signon_bonus','=',True)]}"/>
+                            </group>
+                            <group name="gosi" col="2" string="Gosi Contribution">
+                                <!--                                    <field name="gosi_type"/>-->
+                                <field name="gosi_employee_pay_manual"/>
+                                <field name="gosi_company_pay_manual"/>
+                                <separator/>
+                                <field name="gosi_employee_pay"/>
+                                <field name="gosi_company_pay"/>
+                                <field name="gosi_total_pay"/>
+                                <field name="gosi_eligible"/>
+                            </group>
+                            <group name="Insurance" string="Insurance" col="2">
+                                <field name="is_insurance"/>
+                                <field name="insurance_id"
+                                       attrs="{'invisible': [('is_insurance','!=',True)]}"/> <!--, 'required': [('is_insurance','=',True)] -->
+                                <field name="insurance_cost"
+                                       attrs="{'invisible': [('is_insurance','!=',True)], 'required': [('is_insurance','=',True)]}"/>
+                            </group>
+                            <group name="STB" string="STB" col="2">
+                                <field name="is_eos_amount"/>
+                                <field name="today" attrs="{'invisible': [('is_eos_amount','!=',True)]}"/>
+                                <field name="total_days" attrs="{'invisible': [('is_eos_amount','!=',True)]}"/>
+                                <field name="eos_amount" attrs="{'invisible': [('is_eos_amount','!=',True)]}"/>
+                                <field name="eos_accrual_move_id" attrs="{'invisible': [('is_eos_amount','!=',True)]}"/>
+                            </group>
+                            <group name="vacation" col="2" string="Vacation">
+                                <field name="is_vacation"/>
+                                <field name="remaining_leaves" attrs="{'invisible': [('is_vacation','!=',True)]}"/>
+                                <field name="vacation" attrs="{'invisible': [('is_vacation','!=',True)]}"/>
+                            </group>
+                            <group name="sce" col="2" string="SCE or Others">
+                                <field name="is_sce"/>
+                                <field name="sce"
+                                       attrs="{'invisible': [('is_sce','!=',True)], 'required': [('is_sce','=',True)]}"/>
+                            </group>
+                            <group name="other_ins" col="2" string="Other Insurance">
+                                <field name="is_other_insurance"/>
+                                <field name="other_insurance"
+                                       attrs="{'invisible': [('is_other_insurance','!=',True)], 'required': [('is_other_insurance','=',True)]}"/>
+                            </group>
+                            <group name="other_cost" col="2" string="Other Cost">
+                                <field name="mobilization_fee"/>
+                                <field name="residency_cost"/>
+                            </group>
+
+                        </group>
+                        <group name="Total Cost" string="Total Cost" col="4">
+                            <field name="yearly_indirect_cost"/>
+                            <field name="monthly_indirect_cost"/>
+                            <field name="total_monthly_cost"/>
+                            <field name="total_yearly_cost"/>
+                        </group>
+
+                    </page>
+                    <page string="Extra Information" groups="base.group_no_one">
+                        <group col="4">
+                            <field name="create_uid" readonly="1"/>
+                            <field name="create_date" readonly="1"/>
+                            <field name="write_uid" readonly="1"/>
+                            <field name="write_date" readonly="1"/>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="hr_contract_view_search" model="ir.ui.view">
+        <field name="name">hr.contract.view.search</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='running']" position="before">
+                <filter string="Saudi" name="is_saudi"
+                        domain="[('employee_id.is_saudi','=','True')]"/>
+                <filter string="Non-Saudi" name="is_saudi" domain="[('employee_id.is_saudi','!=','True')]"/>
+                <filter string="To be Renew" icon="terp-go-today" name="state" domain="[('state','=','pending')]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Contract View -->
+    <record id="hr_contract_view_tree" model="ir.ui.view">
+        <field name="name">hr.contract.view.tree</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+        <field name="arch" type="xml">
+            <!--            <xpath expr="//tree" position="attributes">-->
+            <!--                <attribute name="colors">-->
+            <!--                    {red:state=='close';blue:state=='pending';gray:state=='draft';green:state=='open';}-->
+            <!--                </attribute>-->
+            <!--            </xpath>-->
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <!-- <field name="notify_date" invisible="1"/> -->
+                <field name="state" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_grade_form_inherit" model="ir.ui.view">
+        <field name="name">hr.grade.form</field>
+        <field name="model">hr.grade</field>
+        <field name="inherit_id" ref="ahcec_hr_grade.view_grade_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="mobile_allowance"/>
+            </field>
+        </field>
+    </record>
+</odoo>

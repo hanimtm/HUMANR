@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="batch_payroll_wizard_view">
+            <field name="name">batch.payroll.form</field>
+            <field name="model">batch.payroll</field>
+                <field name="arch" type="xml">
+                    <form string="Batch Payroll">
+	                    <group>
+	                        <group>
+	                            <field name="date_from"/>
+                                <field name="date_to"/>
+                                <field name="is_aramco_smdcad"/>
+                            </group>
+	                    </group>
+	                    <footer>
+	                        <button name="generate_payslips" string="Batch Payroll" type="object" class="btn-primary"/>
+	                        or
+	                        <button string="Cancel" class="btn-default" special="cancel"/>
+	                    </footer>
+                	</form>
+                </field>
+        </record>
+        
+        <record id="batch_payroll_wizard_act" model="ir.actions.act_window">
+            <field name="name">Batch Payroll</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">batch.payroll</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="batch_payroll_wizard_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_hr_payroll_batch" name="Batch Payroll" sequence="11"
+              parent="hr_payroll.menu_hr_payroll_root" action="batch_payroll_wizard_act"
+              groups="hr_payroll.group_hr_payroll_user"/>
+   </data>
+</odoo>

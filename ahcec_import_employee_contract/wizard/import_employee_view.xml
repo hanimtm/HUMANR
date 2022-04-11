@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<!-- Import Employee Wizard View -->
+		<record id="import_employee_contract_form_view" model="ir.ui.view">
+			<field name="name">import.employee.contract.view</field>
+			<field name="model">import.employee.contract</field>
+			<field name="arch" type="xml">
+			<form string="Import Employees">
+				<group>
+					<group>
+						<field name="file_type" widget="radio"/>
+					</group>
+					<group>
+						<field name="file" placeholder="Upload Your File"/>
+					</group>
+				</group>
+				<footer>
+					<button name="import_employee_contract" string="Import" type="object" icon="fa-download" class="btn btn-primary active"/>
+					<button string="Cancel" special="cancel" icon="fa-times" class="btn btn-danger"  />
+				</footer>
+			</form>
+			</field>
+		</record>
+
+		<record id="import_employee_contract_wizard_action" model="ir.actions.act_window">
+            <field name="name">Import Employee Contracts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">import.employee.contract</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+	</data>
+</odoo>

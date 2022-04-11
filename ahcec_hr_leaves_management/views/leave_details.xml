@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_leave_detail_tree" model="ir.ui.view">
+        <field name="name">leave.detail.tree</field>
+        <field name="model">leave.detail</field>
+        <field name="arch" type="xml">
+            <tree string="Leave Details">
+                <field name="name"/>
+                <field name="period_id" invisible="1"/>
+<!--                <field name="holiday_id"/>-->
+<!--                <field name="employee_id"/>-->
+                <field name="already_taken"/>
+                <field name="already_taken_month"/>
+                <field name="paid_leave"/>
+                <field name="unpaid_leave"/>
+                <field name="leave_hours"/>
+                <field name="total_leave_hours"/>
+                <field name="unpaid_leave_hours"/>
+                <field name="total_leave"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+    <record id="view_leave_detail_form" model="ir.ui.view">
+        <field name="name">leave.detail.form</field>
+        <field name="model">leave.detail</field>
+        <field name="arch" type="xml">
+            <form string="Leave Details">
+                <group>
+                    <field name="name"/>
+                    <field name="period_id"/>
+<!--                    <field name="holiday_id"/>-->
+<!--                    <field name="employee_id"/>-->
+                    <field name="already_taken"/>
+                    <field name="already_taken_month"/>
+                </group>
+                <group>
+                    <field name="paid_leave"/>
+                    <field name="unpaid_leave"/>
+                    <field name="leave_hours"/>
+                    <field name="total_leave_hours"/>
+                    <field name="unpaid_leave_hours"/>
+                    <field name="total_leave"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+<!--    <record id="open_leave_detail_view" model="ir.actions.act_window">-->
+<!--            <field name="name">Leave Details</field>-->
+<!--            <field name="res_model">leave.detail</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="help" type="html">-->
+<!--              <p class="o_view_nocontent_smiling_face">-->
+<!--                Leave details-->
+<!--              </p><p>-->
+<!--              </p>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+
+    <record id="open_leave_detail_view" model="ir.actions.act_window">
+        <field name="name">Leave Details</field>
+        <field name="res_model">leave.detail</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<!--    <menuitem name="Leave Details" action="open_leave_detail_view" id="menu_leave_detail" parent="hr_holidays.menu_hr_holidays_root"-->
+<!--              sequence="21" />-->
+
+</odoo>

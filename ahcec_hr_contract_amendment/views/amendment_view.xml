@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="contract_amendment_form_view" model="ir.ui.view">
+        <field name="name">contract_amendment.form</field>
+        <field name="model">contract.amendment</field>
+        <field name="arch" type="xml">
+            <form string="Contract Amendment">
+                <header>
+                    <button name="amendment_confirm" string="Confirm" states="draft" type="object" class="oe_highlight" />
+                    <button name="amendment_validate" string="Validate" states="confirm" type="object" class="oe_highlight" groups="hr.group_hr_user"/>
+                    <button name="amendment_approve" string="Approve" states="validate" type="object" class="oe_highlight" groups="hr.group_hr_user"/>
+                    <button name="amendment_done" string="Done" states="approve" type="object" class="oe_highlight" groups="hr.group_hr_user"/>
+                    <button name="amendment_cancel" string="Cancel" states="confirm,inprogress,approve,validate" type="object" groups="hr.group_hr_user"/>
+                    <button name="set_to_draft_user" string="Set to Draft" states="cancel" type="object" groups="base.group_erp_manager"/>
+                    <button name="set_to_draft" string="Set to Draft" states="cancel" type="object" groups="hr.group_hr_user"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm" statusbar_colors='{"new":"blue","validate":"red","inprogress":"red","cancel":"red"}' />
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Employee Information">
+                            <field name="employee_id" placeholder='Select Employee...' attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <group string="Contract Information">
+                            <field name="hr_contract_id" context="{'default_employee_id':employee_id}" placeholder='Select Employee running contract...' attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="effective_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="From">
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="To">
+                            <field name="new_department_id" placeholder='To Department'
+                                   attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                        </group>
+                        <group name="current_duration_group" string="Current Contract Terms">
+                            <field name="current_start_date"/>
+                            <label for="current_end_date"/>
+                            <div class="o_row">
+                                <field name="current_end_date" nolabel="1"/>
+                            </div>
+                        </group>
+                        <group name="new_duration_group" string="New Contract Terms">
+                            <field name="new_start_date"/>
+                            <label for="new_end_date"/>
+                            <div class="o_row">
+                                <field name="new_end_date" nolabel="1"/>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Package Update">
+                            <field name="package_id" attrs="{'readonly':[('state','!=','draft')]}">
+                                <tree string="Packages" editable="bottom">
+                                    <field name="amendment_id" invisible="1"/>
+                                    <field name="name"/>
+                                    <field name="current_package"/>
+                                    <field name="change_value"/>
+                                    <field name="new_package"/>
+                                    <field name="approved_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Description">
+                            <seperator string="Description" />
+                            <field name="description" nolabel="1" />
+                        </page>
+                        <page string="Extra Information" groups="base.group_no_one">
+                            <group name="extra_info" col="4">
+                                <field name="create_uid" readonly="1"/>
+                                <field name="create_date" readonly="1"/>
+                                <field name="write_uid" readonly="1"/>
+                                <field name="write_date" readonly="1"/>
+                                <field name="validated_by" attrs="{'invisible':[('validated_by','=',False)]}" />
+                                <field name="validated_date" attrs="{'invisible':[('validated_date','=',False)]}" />
+                                <field name="approved_by" attrs="{'invisible':[('approved_by','=',False)]}" />
+                                <field name="approved_date" attrs="{'invisible':[('approved_date','=',False)]}" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="contract_amendment_tree_view" model="ir.ui.view">
+        <field name="name">contract.amendment.tree</field>
+        <field name="model">contract.amendment</field>
+        <field name="arch" type="xml">
+            <tree string="Contract Amendment">
+                <field name="employee_id" />
+                <field name="department_id" />
+                <field name="new_department_id" />
+                <field name="job_id" />
+                <field name="new_job_id" />
+                <field name="effective_date" />
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="contract_amendment_filter" model="ir.ui.view">
+        <field name="name">contract.amendment.filter</field>
+        <field name="model">contract.amendment</field>
+        <field name="arch" type="xml">
+            <search string="Filter">
+                <field name="employee_id"/>
+                <field name="hr_contract_id"/>
+<!--                <field name="branch_id"/>-->
+                <filter string="Draft" name="Draft"
+                    domain="[('state','=',('draft'))]"
+                    help="Visa that has been approved" />
+                <filter string="Confirm" name="Confirm"
+                    domain="[('state','=',('confirm'))]"
+                    help="Visa that has been waiting for approval" />
+                <filter string="Validate" name="Validate"
+                    domain="[('state','=',('validate'))]"
+                    help="Visa that has been refused" />
+                <filter string="Approved" name="Approved"
+                    domain="[('state','=',('approve'))]"
+                    help="Visa that has been refused" />
+                <filter string="Done" name="Done"
+                    domain="[('state','=',('done'))]"
+                    help="Visa that
+                    has been refused" />
+                <group expand="0" string="Group By...">
+                    <filter string="Employee" name="Employee" context="{'group_by':'employee_id'}" />
+<!--                    <filter string="From Office" name="From Office" context="{'group_by':'branch_id'}" />-->
+                    <filter string="From Job Position" name="From Job Position" context="{'group_by':'job_id'}" />
+                    <filter string="From Department" name="From Department" context="{'group_by':'department_id'}" />
+<!--                    <filter string="To Office" name="To Office" context="{'group_by':'new_branch_id'}" />-->
+                    <filter string="To Job Position" name="To Job Position" context="{'group_by':'new_job_id'}" />
+                    <filter string="To Department" name="To Department" context="{'group_by':'new_department_id'}" />
+                    <filter string="Effective Date" name="Effective Date" context="{'group_by':'effective_date'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_contract_amendment_view" model="ir.actions.act_window">
+        <field name="name">Contract Amendment</field>
+        <field name="res_model">contract.amendment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_contract_amendment_view1" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="contract_amendment_tree_view" />
+        <field name="act_window_id" ref="action_contract_amendment_view" />
+    </record>
+
+    <record id="action_contract_amendment_view2" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="contract_amendment_form_view" />
+        <field name="act_window_id" ref="action_contract_amendment_view" />
+    </record>
+
+<!--    <record id="act_amendment_list" model="ir.actions.act_window">-->
+<!--        <field name="res_model">contract.amendment</field>-->
+<!--        <field name="src_model">hr.contract</field>-->
+<!--        <field name="name">Amendments</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--        <field name="domain">[('employee_id.user_id', '=', user.id),('hr_contract_id','=',active_id)]</field>-->
+<!--        <field name="context">{'search_default_hr_contract_id': [active_id], 'default_hr_contract_id': active_id}</field>-->
+<!--    </record>-->
+
+<!--    <record id="amendment_hr_contract_form" model="ir.ui.view">-->
+<!--        <field name="name">amendment.hr.contract.view.form</field>-->
+<!--        <field name="model">hr.contract</field>-->
+<!--        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <div name="title" position="before">-->
+<!--                <div class="oe_button_box" name="button_box">-->
+<!--                    <button name="%(act_amendment_list)d"-->
+<!--                        class="oe_stat_button"-->
+<!--                        icon="fa-money"-->
+<!--                        type="action"-->
+<!--                        groups="hr_payroll.group_hr_payroll_user">-->
+<!--                        <field name="amendment_count" widget="statinfo" string="Amendments"/>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <xpath expr="//field[@name='struct_id']" position="after">-->
+<!--                <field name="is_aramco_smdcad"/>-->
+<!--            </xpath>-->
+<!--            <xpath expr="//sheet" position="inside">-->
+<!--                <notebook>-->
+<!--                    <page string="Contract History">-->
+<!--                        <field name="amendment_ids">-->
+<!--                            <tree string="Packages" editable="bottom">-->
+<!--                                    <field name="amendment_id" invisible="1"/>-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="current_package"/>-->
+<!--                                    <field name="new_package"/>-->
+<!--                                    <field name="approved_date"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                    </page>-->
+<!--                </notebook>-->
+<!--            </xpath>-->
+
+
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="hr_payslip_view_form" model="ir.ui.view">
+        <field name="name">hr.payslip.view.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+<!--            <xpath expr="//button[@name='compute_sheet']" position="attributes">-->
+<!--                <attribute name="name">compute_sheet_ahcec</attribute>-->
+<!--           </xpath>-->
+            <xpath expr="//button[@name='action_payslip_done']" position="attributes">
+                <attribute name="name">action_payslip_done_new</attribute>
+           </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+               <field name="gosi_for_employee"/>
+           </xpath>
+        </field>
+    </record>
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">hr.employee.view.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='department_id']" position="after">
+               <field name="is_aramco_smdcad"/>
+           </xpath>
+        </field>
+    </record>
+<!--    <record id="hr_payslip_run_form_inherit1" model="ir.ui.view">-->
+<!--        <field name="name">hr.payslip.run.inherit</field>-->
+<!--        <field name="model">hr.payslip.run</field>-->
+<!--        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//button[@name='draft_payslip_run']" position="after">-->
+<!--                <button string="Post All" name="confirm_all_sheet" type="object"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    <record id="hr_payslip_run_form_inherit2" model="ir.ui.view">-->
+<!--        <field name="name">hr.payslip.run.inherit</field>-->
+<!--        <field name="model">hr.payslip.run</field>-->
+<!--        <field name="inherit_id" ref="ahcec_hr_payroll.hr_payslip_run_form_inherit1"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//button[@name='compute_all_sheet']" position="attributes">-->
+<!--                <attribute name="name">compute_sheet_all</attribute>>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+</odoo>

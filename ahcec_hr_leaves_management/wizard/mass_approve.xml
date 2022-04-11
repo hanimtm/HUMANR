@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="approve_leave_allocation" model="ir.ui.view">
+            <field name="name">Approve Allocation</field>
+            <field name="model">approve.leave.allocation</field>
+            <field name="arch" type="xml">
+                <form string="Approve Leave Allocation">
+<!--                    <label string="All selected leave allocation will be approved. You won't be able to modify them afterwards."/>-->
+                    <footer>
+                        <button string="Approve Allocations" name="approve_leave" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_leave_allocation" model="ir.actions.act_window">
+            <field name="name">Approve Allocation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">approve.leave.allocation</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="approve_leave_allocation"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="help">All selected leave allocation will be approved. You won't be able to modify them afterwards.</field>
+<!--            <field name="binding_model_id" ref="hr_holidays.model_hr_holidays"/>-->
+        </record>
+</odoo>
