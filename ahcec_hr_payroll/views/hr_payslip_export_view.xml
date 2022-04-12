@@ -13,7 +13,8 @@
                         <field name="line_ids" nolabel="1" colspan="4">
                             <tree string="Export Lines" editable="1" >
                                 <field name="sequence" invisible="1"/>
-                                <field name="rule_id" required="1" domain="[('parent_rule_id', '=', False)]"/>
+<!--                                <field name="rule_id" required="1" domain="[('parent_rule_id', '=', False)]"/>-->
+                                <field name="rule_id" required="1" />
                                 <field name="is_difference_field" string="Is Export Line Difference"/>
                             </tree>
                         </field>
