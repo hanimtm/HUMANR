@@ -25,7 +25,7 @@ EOS amount
     'website': 'http://www.ahcec.com',
     'category': 'Human Resources',
     'version': '1.0',
-    'depends': ['hr', 'base', 'hr_payroll_account', 'ahcec_hr_leaves_management'],
+    'depends': ['hr', 'base',  'ahcec_hr_leaves_management'],
     'data': [
         'security/ir.model.access.csv',
         'security/ir_rule.xml',

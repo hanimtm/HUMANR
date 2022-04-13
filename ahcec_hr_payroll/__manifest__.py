@@ -11,10 +11,10 @@
     'version': '1.0',
     'sequence': 20,
     'depends': [
-                'hr_payroll_account',
                 'hr_expense_payment',
                 'ahcec_hr_contract',
                 ],
+    # trevgdgre
     'data': [
         'security/ir.model.access.csv',
         'data/hr_payroll_data.xml',
