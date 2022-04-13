@@ -220,10 +220,16 @@ class Payslip(models.Model):
         # res = super(HrPayslip, self).action_payslip_done()
         # try:
         for slip in self:
-
-            work_data = self.employee_id.get_work_days_data(datetime.strptime(str(self.date_from), '%Y-%m-%d'),
-                                                datetime.strptime(str(self.date_to), '%Y-%m-%d'),
-                                                calendar=self.contract_id.resource_calendar_id)
+            employee = self.contract_id.employee_id
+            work_data = employee._get_work_days_data_batch(
+                datetime.strptime(str(self.date_from), '%Y-%m-%d'),
+                datetime.strptime(str(self.date_to), '%Y-%m-%d'),
+                compute_leaves=False,
+                calendar=self.contract_id.resource_calendar_id
+            )[employee.id]
+            # work_data = self.employee_id.get_work_days_data(datetime.strptime(str(self.date_from), '%Y-%m-%d'),
+            #                                     datetime.strptime(str(self.date_to), '%Y-%m-%d'),
+            #                                     calendar=self.contract_id.resource_calendar_id)
             if round(work_data['hours']) < slip.total_timesheet_hours:
                 work_data['hours'] = slip.total_timesheet_hours
 
