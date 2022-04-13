@@ -221,7 +221,7 @@ class Payslip(models.Model):
         # try:
         for slip in self:
 
-            work_data = self.get_work_days_data(datetime.strptime(str(self.date_from), '%Y-%m-%d'),
+            work_data = self.employee_id.get_work_days_data(datetime.strptime(str(self.date_from), '%Y-%m-%d'),
                                                 datetime.strptime(str(self.date_to), '%Y-%m-%d'),
                                                 calendar=self.contract_id.resource_calendar_id)
             if round(work_data['hours']) < slip.total_timesheet_hours:
