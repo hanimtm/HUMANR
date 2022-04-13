@@ -9,7 +9,7 @@
     'website': 'http://www.ahcec.com',
     'category': 'HR',
     'version': '1.0',
-    'depends': ['hr', 'hr_contract', 'hr_payroll', 'ahcec_hr_payroll', 'ahcec_hr_leaves_management'],# 'ahcec_hr_grade','hr_warning'],
+    'depends': ['hr', 'hr_contract', 'hr_payroll_account', 'hr_payroll', 'ahcec_hr_payroll', 'ahcec_hr_leaves_management'],# 'ahcec_hr_grade','hr_warning'],
     'data': [
         'data/hr_payroll_data.xml',
         'security/ir.model.access.csv',

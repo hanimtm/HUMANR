@@ -117,7 +117,7 @@ class WizardPayrollHistory(models.TransientModel):
     def get_payslip_distribution(self, slip, type, amount, column, work_data):
         line_ids = []
         total_sheet = 0
-        work_data['hours'] = slip.total_timesheet_hours
+        # work_data['hours'] = slip.total_timesheet_hours
         if slip.timesheet_ids:
             for sheet in slip.timesheet_ids:
                 amt = ((round(amount,2) / (work_data['hours'])) * sheet.total_hours)

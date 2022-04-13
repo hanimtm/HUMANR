@@ -230,8 +230,9 @@ class Payslip(models.Model):
             # work_data = self.employee_id.get_work_days_data(datetime.strptime(str(self.date_from), '%Y-%m-%d'),
             #                                     datetime.strptime(str(self.date_to), '%Y-%m-%d'),
             #                                     calendar=self.contract_id.resource_calendar_id)
-            if round(work_data['hours']) < slip.total_timesheet_hours:
-                work_data['hours'] = slip.total_timesheet_hours
+
+            # if round(work_data['hours']) < slip.total_timesheet_hours:
+            #     work_data['hours'] = slip.total_timesheet_hours
 
             if not self.move_id:
                 precision = self.env['decimal.precision'].precision_get('Payroll')
